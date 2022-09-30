@@ -8,7 +8,7 @@
 				<form method="post">
 					<label>Select Type Search</label>
 					<select class="form-control" name="pil">
-						<option selected disabled>Select Type Search</option>
+						<option selected disabled>--Select Type Search--</option>
 						<option value='1'>NRP</option>
 						<option value='2'>Employee Name</option>
 						<option value='3'>Division</option>

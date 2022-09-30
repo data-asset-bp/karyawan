@@ -9,8 +9,6 @@
 					ADD
 				</button>
 
-				<br><br>
-
 			</div>
 			<div class="card-body">
 				<div class="table table-responsive">

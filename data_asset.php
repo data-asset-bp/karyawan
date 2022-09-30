@@ -16,6 +16,7 @@
             <form method="post">
               <label>Select Search Type</label>
               <select class="form-control" name="pil">
+                <option selected disabled>--Select Search Type--</option>
                 <option value='1'>Asset Number</option>
                 <option value='2'>Type Asset</option>
                 <option value='3'>Serial Number</option>
@@ -23,7 +24,7 @@
               </select>
               <br>
               <label>Select Search Type</label>
-              <input type="text" name="carinama" class="form-control"><br>
+              <input type="text" name="carinama" placeholder="Input Search Type" class="form-control"><br>
               <input type="submit" class="btn btn-warning btn-sm ml-2" value="Cari" name="cari">
             </form>
 
@@ -206,15 +207,20 @@
                               <!-- Modal body -->
                               <form method="post">
                                 <div class="modal-body">
-                                  <input type="text" name="no_asset" value="<?= $no_asset; ?>" class="form-control" required>
+                                  <label>No Asset</label>
+                                  <input type="text" name="no_asset" placeholder="Input No Asset" value="<?= $no_asset; ?>" class="form-control" required>
                                   <br>
-                                  <input type="text" name="type" value="<?= $type; ?>" class="form-control" required>
+                                  <label>Type Asset</label>
+                                  <input type="text" name="type" placeholder="Input Type Asset" value="<?= $type; ?>" class="form-control" required>
                                   <br>
-                                  <input type="text" name="no_serial" value="<?= $no_serial; ?>" class="form-control" required>
+                                  <label>No Serial</label>
+                                  <input type="text" name="no_serial" placeholder="Input No Serial" value="<?= $no_serial; ?>" class="form-control" required>
                                   <br>
+                                  <label>Date</label>
                                   <input type="text" name="date" value="<?= $date; ?>" class="form-control" required>
                                   <br>
-                                  <input type="text" name="description" value="<?= $description; ?>" class="form-control" required>
+                                  <label>Description</label>
+                                  <input type="text" name="description" placeholder="Input Description" value="<?= $description; ?>" class="form-control" required>
                                   <br>
 
                                   <input type="hidden" name="idp" value="<?= $id; ?>">
