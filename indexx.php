@@ -22,7 +22,6 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
@@ -113,17 +112,17 @@
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in">
                         <span>01</span>
                         <h4>User Admin</h4>
-                        <a href="index.php?page=user"><button class="btn btn-primary" name="data_user.php">Selengkapnya</button></a>
+                        <button class="btn btn-primary" name="data_user.php">Selengkapnya</button>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="100">
                         <span>02</span>
                         <h4>Data Karyawan</h4>
-                        <a href="index.php?page=pegawai"><button class="btn btn-primary" name="datapegawai.php">Selengkapnya</button></a>
+                        <button class="btn btn-primary" name="datapegawai.php">Selengkapnya</button>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
                         <span>03</span>
                         <h4> Data Asset</h4>
-                        <a href="index.php?page=asset"><button class="btn btn-primary" name="data_asset.php">Selengkapnya</button></a>
+                        <button class="btn btn-primary" name="data_asset.php">Selengkapnya</button>
                     </div>
                 </div>
             </div>
@@ -140,7 +139,7 @@
                     <div class="col-lg-5 d-flex align-items-stretch">
                         <div class="info">
                             <div class="address">
-                                <a href="https://goo.gl/maps/BF3TXk5j9ReCkKyw5"><i class="bi bi-geo-alt"></i></a>
+                                <i class="bi bi-geo-alt"></i>
                                 <h4>Location:</h4>
                                 <p>Jl. Raya Bekasi KM.22, Cakung Barat, Kota Jakarta Timur, DKI Jakarta</p>
                             </div>
@@ -157,7 +156,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 d-flex align-items-stretch">
-                        <div class="container"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.60122113707814!2d106.92972314756106!3d-6.184251768775842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b682717f291%3A0x6b9be6b2255a6cff!2sKantor%20BP!5e0!3m2!1sid!2sid!4v1663234616172!5m2!1sid!2sid" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps?ll=-6.185225,106.924022&z=16&t=m&hl=id&gl=ID&mapclient=embed&cid=3711677769930078970" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -214,5 +213,4 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>

@@ -4,7 +4,7 @@
             <div class="sb-sidenav-menu">
                  <div class="nav">
                            
-                 <a class="nav-link" href="indexx.php?page=home">
+                 <a class="nav-link" href="home.php?page=home">
                  <div class="sb-nav-link-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
                     Home
                 </a>

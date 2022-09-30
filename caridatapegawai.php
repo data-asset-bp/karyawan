@@ -152,7 +152,8 @@
 
 
 											//cari no asset dari chekout
-											$sql_co=mysqli_query($con,"SELECT no_asset,sts_chek FROM data_chek_asset where Nrp='$nrp' and sts_chek='3'");
+											$sql_co=mysqli_query($con,"SELECT no_asset,sts_chek FROM data_chek_asset where Nrp='$nrp'");
+										
 											$data_co=mysqli_fetch_array($sql_co);
 											$no_aset_co=$data_co['no_asset'];
 											$sts_co=$data_co['sts_chek'];
