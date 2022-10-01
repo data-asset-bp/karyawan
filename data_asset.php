@@ -25,7 +25,7 @@
               <br>
               <label>Select Search Type</label>
               <input type="text" name="carinama" placeholder="Input Search Type" class="form-control"><br>
-              <input type="submit" class="btn btn-warning btn-sm ml-2" value="Cari" name="cari">
+              <input type="submit" class="btn btn-warning btn-sm ml-2" value="Search" name="cari">
             </form>
 
           </div>
@@ -186,6 +186,9 @@
                       </td>
 
                       <td>
+                        <button type="button" class="btn btn-info btn-sm ml-2" data-toggle="modal" data-target="#details<?= $id; ?>">
+                          Details
+                        </button>
                         <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $id; ?>">
                           Edit
                         </button>

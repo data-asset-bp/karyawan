@@ -143,7 +143,7 @@ if(isset($_POST['editasset'])){
 	$description = $_POST['description'];
 	
 	
-	$query = mysqli_query($con,"update data_asset set  no_asset='$no_asset', asset_type='$type', no_serial='$no_serial', cap_date='$date', asset_description='$description' where id_asset='$idp'");
+	$query = mysqli_query($con,"update data_asset set  no_asset='$no_asset', asset_type='$type', no_serial='$no_serial', cap_date='$date', asset_description='$description' where no_asset='$idp'");
 	if($query){
 		header('location:index.php?page=asset');
 	}else{
@@ -156,7 +156,7 @@ if(isset($_POST['editasset'])){
 if(isset($_POST['hapusasset'])){
 	$idp = $_POST['idp'];
 	
-	$hapus = mysqli_query($con, "delete from  data_asset where id_asset='$idp'");
+	$hapus = mysqli_query($con, "delete from  data_asset where no_asset='$idp'");
 	if($hapus){
 		header('location:index.php?page=asset');
 	}else{
@@ -211,4 +211,3 @@ if($addtotable){
 	}
 	
 }
-?>
