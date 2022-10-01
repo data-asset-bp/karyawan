@@ -6,7 +6,7 @@
       <div class="card-header">
         <!-- Button to Open the Modal -->
         <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
-          ADD
+          Add
         </button>
         <a href="export.php"><button type="button" class="btn btn-success btn-sm ml-2">Export</button></a>
 
@@ -20,7 +20,7 @@
                 <option value='1'>Asset Number</option>
                 <option value='2'>Type Asset</option>
                 <option value='3'>Serial Number</option>
-                <option value='4'>ASSET DESCRIPTION</option>
+                <option value='4'>Asset Description</option>
               </select>
               <br>
               <label>Select Search Type</label>
@@ -116,8 +116,9 @@
                                   <label>Asset Description</label>
                                   <input type="text" name="description" value="<?= $description; ?>" class="form-control" required readonly>
                                   <br>
-                                  <label>STATUS</label>
+                                  <label>Status</label>
                                   <select class="form-control" name="sts">
+                                    <option selected disabled>--Select Status--</option>
                                     <option value='1'>Pending</option>
                                     <option value='2'>UnDiployable</option>
                                     <option value='3'>Deployed</option>
@@ -138,14 +139,13 @@
                                             <li class="nav-item">
                                               <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Asset</a>
                                             </li>
-
                                           </ul>
                                         </div>
                                         <div class="card-body">
                                           <div class="tab-content" id="custom-tabs-one-tabContent">
                                             <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                                               <select class="form-control" style="width: 100%;" name="Nrp">
-                                                <option value="">Pilih nama</option>
+                                                <option value="" selected disabled>--Pilih nama--</option>
                                                 <?PHP
                                                 //mengambil data karyawan
                                                 $sql_kary = mysqli_query($con, "SELECT * FROM data_karyawan order by Nama_karyawan ASC");
@@ -167,13 +167,11 @@
                                       </div>
                                       <br>
 
-                                      <br>
-
-                                      <label>CHECKOUT DATE</label>
+                                      <label>Checkout Date</label>
                                       <input type="date" name="tgl" class="form-control" required>
                                       <br>
-                                      <label>NOTE</label>
-                                      <input type="text" name="note" class="form-control" required>
+                                      <label>Note</label>
+                                      <input type="text" name="note" class="form-control" placeholder="Input Notes" required>
                                       <br>
                                       <input type="hidden" name="idp" value="<?= $id; ?>">
                                       <button type="submit" class="btn btn-primary" name="checkout">Checkout</button>
@@ -259,6 +257,44 @@
                             </div>
                           </div>
                         </div>
+
+                        <!-- details -->
+                        <div class="modal fade" id="details<?= $id; ?>">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+
+                              <!-- Modal Header -->
+                              <div class="modal-header">
+                                <h4 class="modal-title">Details Asset Data</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+
+                              <!-- Modal body -->
+                              <form method="post">
+                                <div class="modal-body">
+                                  <label>No Asset</label>
+                                  <input type="" name="no_asset" value="<?= $no_asset; ?>" class="form-control" disabled>
+                                  <br>
+                                  <label>Type Asset</label>
+                                  <input type="" name="type" value="<?= $type; ?>" class="form-control" disabled>
+                                  <br>
+                                  <label>No Serial</label>
+                                  <input type="" name="no_serial" value="<?= $no_serial; ?>" class="form-control" disabled>
+                                  <br>
+                                  <label>Date</label>
+                                  <input type="" name="date" value="<?= $date; ?>" class="form-control" disabled>
+                                  <br>
+                                  <label>Description</label>
+                                  <input type="" name="description" value="<?= $description; ?>" class="form-control" disabled>
+                                  <br>
+                                  <input type="hidden" name="idp" value="<?= $id; ?>">
+                                </div>
+                              </form>
+
+                            </div>
+                          </div>
+                        </div>
+
                       </td>
                     </tr>
                   <?php

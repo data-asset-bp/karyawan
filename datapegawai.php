@@ -6,7 +6,7 @@
 			<div class="card-header">
 				<!-- Button to Open the Modal -->
 				<button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
-					ADD
+					Add
 				</button>
 
 			</div>
@@ -15,15 +15,15 @@
 					<table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover">
 						<thead>
 							<tr>
-								<td>NO</td>
+								<td>No</td>
 								<td>NRP</td>
-								<td>NAMA KARYAWAN</td>
-								<td>DIV</td>
+								<td>Employee Name</td>
+								<td>Divison</td>
 								<td>BA</td>
 								<td>PA</td>
 								<td>HO/CAB</td>
-								<td>POSITION</td>
-								<td>AKSI</td>
+								<td>Position</td>
+								<td>More</td>
 
 							</tr>
 						</thead>
@@ -60,12 +60,53 @@
 									<td><?= $position; ?></td>
 
 									<td>
+										<button type="button" class="btn btn-info btn-sm ml-2" data-toggle="modal" data-target="#details<?= $idp; ?>">
+											Details
+										</button>
 										<button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $idp; ?>">
 											Edit
 										</button>
 										<button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $idp; ?>">
 											Delete
 										</button>
+
+										<!-- details -->
+										<div class="modal fade" id="details<?= $idp; ?>">
+											<div class="modal-dialog">
+												<div class="modal-content">
+
+													<!-- Modal Header -->
+													<div class="modal-header">
+														<h4 class="modal-title">Details Employee Data </h4>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+
+													<!-- Modal body -->
+													<form method="post">
+														<div class="modal-body">
+															<label>NRP</label>
+															<input type="" name="nrp" value="<?= $nrp; ?>" class="form-control" disabled>
+															<br>
+															<label>Employee Name</label>
+															<input type="" name="nama" value="<?= $nama; ?>" class="form-control" disabled>
+															<br>
+															<label>Division</label>
+															<input type="" name="div" value="<?= $div; ?>" class="form-control" disabled>
+															<br>
+															<label>BA</label>
+															<input type="" name="ba" value="<?= $ba; ?>" class="form-control" disabled>
+															<br>
+															<label>PA</label>
+															<input type="" name="pa" value="<?= $pa; ?>" class="form-control" disabled>
+															<br>
+															<input type="hidden" name="idp" value="<?= $idp; ?>">
+														</div>
+													</form>
+
+												</div>
+											</div>
+										</div>
+
 
 										<!-- edit The Modal -->
 										<div class="modal fade" id="edit<?= $idp; ?>">
@@ -81,15 +122,19 @@
 													<!-- Modal body -->
 													<form method="post">
 														<div class="modal-body">
+															<label>NRP</label>
 															<input type="text" name="nrp" value="<?= $nrp; ?>" class="form-control" required>
 															<br>
+															<label>Employee Name</label>
 															<input type="text" name="nama" value="<?= $nama; ?>" class="form-control" required>
 															<br>
+															<label>Division</label>
 															<input type="text" name="div" value="<?= $div; ?>" class="form-control" required>
 															<br>
+															<label>BA</label>
 															<input type="text" name="ba" value="<?= $ba; ?>" class="form-control" required>
 															<br>
-
+															<label>PA</label>
 															<input type="text" name="pa" value="<?= $pa; ?>" class="form-control" required>
 															<br>
 
@@ -154,13 +199,15 @@
 			<!-- Modal body -->
 			<form method="post">
 				<div class="modal-body">
-					<input type="text" name="nrp" placeholder="Nrp" class="form-control" required>
+					<label>NRP</label>
+					<input type="text" name="nrp" placeholder="Masukkan NRP" class="form-control" required>
 					<br>
-					<input type="text" name="nama" placeholder="Nama Pegawai" class="form-control" required>
+					<label>Nama Karyawan</label>
+					<input type="text" name="nama" placeholder="Masukkan Nama Pegawai" class="form-control" required>
 					<br>
 					<label>Divisi</label>
 					<select name="div" class="form-control" required>
-						<option value="">--Pilihan--</option>
+						<option value="" selected disabled>--Pilihan--</option>
 						<option value="BOD">BOD</option>
 						<option value="Corporate Function">Corporate Function</option>
 						<option value="Finance, Accounting & Procurement">Finance, Accounting & Procurement</option>
@@ -170,12 +217,10 @@
 						<option value="Sales & Branch Operation">Sales & Branch Operation</option>
 						<option value="Branch Operations">Branch Operations</option>
 					</select>
-
 					<br>
 					<label>BA</label>
-
 					<select name="ba" class="form-control" required>
-						<option value="">--Pilihan--</option>
+						<option value="" selected disabled>--Pilihan--</option>
 						<option value=" BJM">1. BJM</option>
 						<option value="BLP">2. BLP</option>
 						<option value=" FRP">3. FRP</option>
@@ -189,10 +234,9 @@
 						<option value=" TBT">11. TBT</option>
 					</select>
 					<br>
-					<br>
 					<label>PA</label>
 					<select name="pa" class="form-control" required>
-						<option value="">--Pilihan--</option>
+						<option value="" selected disabled>--Pilihan--</option>
 						<option value="Bekasi">1. Bekasi</option>
 						<option value="BJM">2. BJM</option>
 						<option value="Adaro">a. Adaro</option>
@@ -247,13 +291,15 @@
 					<br>
 					<label>HO/CABANG</label>
 					<select name="ho" class="form-control" required>
-						<option value="">--Pilihan--</option>
+						<option value="" selected disabled>--Pilihan--</option>
 						<option value="HO">1. HO</option>
 						<option value="Cabang">2. Cabang</option>
-						<br>
-						<input type="text" name="position" placeholder="Position" class="form-control" required>
-						<br>
-						<button type="submit" class="btn btn-primary" name="tambahpegawai">Submit</button>
+					</select>
+					<br>
+					<label>Position</label>
+					<input type="text" name="position" placeholder="Position" class="form-control" required>
+					<br>
+					<button type="submit" class="btn btn-primary" name="tambahpegawai">Submit</button>
 				</div>
 			</form>
 
