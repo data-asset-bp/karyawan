@@ -4,7 +4,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
 
-                    <a class="nav-link" href="home.php">
+                    <a class="nav-link" href="index.php?page=dashboard">
                         <div class="sb-nav-link-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
                         Dashboard
                     </a>

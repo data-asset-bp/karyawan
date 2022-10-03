@@ -22,6 +22,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
@@ -112,17 +113,23 @@
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in">
                         <span>01</span>
                         <h4>User Admin</h4>
-                        <button class="btn btn-primary" name="data_user.php">Selengkapnya</button>
+                        <a href="/admin.php">
+                            <button class="btn btn-primary" name="data_user.php">Selengkapnya</button>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="100">
                         <span>02</span>
                         <h4>Data Karyawan</h4>
-                        <button class="btn btn-primary" name="datapegawai.php">Selengkapnya</button>
+                        <a href="">
+                            <button class="btn btn-primary" name="datapegawai.php">Selengkapnya</button>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
                         <span>03</span>
                         <h4> Data Asset</h4>
-                        <button class="btn btn-primary" name="data_asset.php">Selengkapnya</button>
+                        <a href="">
+                            <button class="btn btn-primary" name="data_asset.php">Selengkapnya</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -213,4 +220,5 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
