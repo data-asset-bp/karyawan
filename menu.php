@@ -30,7 +30,7 @@
                         Search Employee Asset Data
                     </a>
 
-                    <a class="nav-link" href="/view/status/view.php">
+                    <a class="nav-link" href="view/status/view.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-fw fa-cog"></i>
                         </div>
                         Asset Status
