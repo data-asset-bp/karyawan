@@ -1,10 +1,6 @@
 <main>
   <div class="container-fluid">
     <h1 class="mt-4">Check In Data</h1>
-
-
-    <br><br>
-
   </div>
   <div class="card-body">
     <div class="table table-responsive">
@@ -20,7 +16,7 @@
             <td>Check Out Notes</td>
             <td>Check In Notes</td>
             <td>Status</td>
-            <td>Action</td>
+            <td style="text-align:center">Action</td>
 
           </tr>
         </thead>
@@ -39,6 +35,7 @@
             $note_checkout = $data['note_checkout'];
             $note_checkin = $data['note_checkin'];
             $sts_chek = $data['sts_chek'];
+            sts_check($sts_chek);
 
           ?>
             <tr>
@@ -52,11 +49,16 @@
               <td><?= $note_checkin; ?></td>
               <td><?= sts_check($sts_chek); ?></td>
               <td>
-                <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkin<?= $id; ?>">
-                  Chek In
+                <button type="button" class="btn btn-info btn-sm ml-2" data-toggle="modal" data-target="#details<?= $no_asset; ?>">
+                  Details
                 </button>
+                <a>
+                  <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkin<?= $id; ?>">
+                    Chek In
+                  </button>
+                </a>
                 <a href="view/export/export_pdf.php">
-                  <button type="button" class="btn btn-info btn-sm ml-2" name="print">
+                  <button type="button" class="btn btn-success btn-sm ml-2" name="print">
                     Print
                   </button>
                 </a>
@@ -106,6 +108,53 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- details -->
+                <div class="modal fade" id="details<?= $no_asset; ?>">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <form method="post">
+                        <div class="modal-body">
+                          <label>Employee Name</label>
+                          <input type="" name="nama" value="<?= nrptonama($Nrp); ?>" class="form-control" disabled>
+                          <br>
+                          <label>Asset Number</label>
+                          <input type="" name="type" value="<?= $no_asset; ?>" class="form-control" disabled>
+                          <br>
+                          <label>Asset Description</label>
+                          <input type="" name="no_asset" value="<?= noassettodesc($no_asset); ?>" class="form-control" disabled>
+                          <br>
+                          <label>Check Out Date</label>
+                          <input type="" name="date_checkout" value="<?= $tgl_checkout; ?>" class="form-control" disabled>
+                          <br>
+                          <label>Check In Date</label>
+                          <input type="" name="date_checkin" value="<?= $tgl_checkin; ?>" class="form-control" disabled>
+                          <br>
+                          <label>Check Out Notes</label>
+                          <input type="" name="note_checkout" value="<?= $note_checkout; ?>" class="form-control" disabled>
+                          <br>
+                          <label>Check In Notes</label>
+                          <input type="" name="note_checkin" value="<?= $note_checkin; ?>" class="form-control" disabled>
+                          <br>
+                          <label>Status</label>
+                          <input type="" name="sts" value="<?= sts_check($sts_chek); ?>" class="form-control" disabled>
+                          <br>
+                          <input type="hidden" name="idp" value="<?= $no_asset; ?>">
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+
               </td>
 
             </tr>
