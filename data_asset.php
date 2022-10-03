@@ -86,12 +86,12 @@
                       <td><?= $description; ?></td>
                       <td><?= sts_check($sts); ?></td>
                       <td>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $id; ?>">
+                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>">
                           CHECKOUT
                         </button>
 
                         <!-- Checkout The Modal -->
-                        <div class="modal fade" id="checkout<?= $id; ?>">
+                        <div class="modal fade" id="checkout<?= $no_asset; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
@@ -173,7 +173,7 @@
                                       <label>Note</label>
                                       <input type="text" name="note" class="form-control" placeholder="Input Notes" required>
                                       <br>
-                                      <input type="hidden" name="idp" value="<?= $id; ?>">
+                                      <input type="hidden" name="idp" value="<?= $no_asset; ?>">
                                       <button type="submit" class="btn btn-primary" name="checkout">Checkout</button>
                                     </div>
                               </form>
@@ -184,18 +184,18 @@
                       </td>
 
                       <td>
-                        <button type="button" class="btn btn-info btn-sm ml-2" data-toggle="modal" data-target="#details<?= $id; ?>">
+                        <button type="button" class="btn btn-info btn-sm ml-2" data-toggle="modal" data-target="#details<?= $no_asset; ?>">
                           Details
                         </button>
-                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $id; ?>">
+                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $no_asset; ?>">
                           Edit
                         </button>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $id; ?>">
+                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $no_asset; ?>">
                           Delete
                         </button>
 
                         <!-- edit The Modal -->
-                        <div class="modal fade" id="edit<?= $id; ?>">
+                        <div class="modal fade" id="edit<?= $no_asset; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
@@ -224,7 +224,7 @@
                                   <input type="text" name="description" placeholder="Input Description" value="<?= $description; ?>" class="form-control" required>
                                   <br>
 
-                                  <input type="hidden" name="idp" value="<?= $id; ?>">
+                                  <input type="hidden" name="idp" value="<?= $no_asset; ?>">
                                   <button type="submit" class="btn btn-primary" name="editasset">Simpan</button>
                                 </div>
                               </form>
@@ -234,7 +234,7 @@
                         </div>
 
                         <!-- delete The Modal -->
-                        <div class="modal fade" id="delete<?= $id; ?>">
+                        <div class="modal fade" id="delete<?= $no_asset; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
@@ -248,7 +248,7 @@
                               <form method="post">
                                 <div class="modal-body">
                                   Are you sure you want to delete? <?= $no_asset; ?>?
-                                  <input type="hidden" name="idp" value="<?= $id; ?>">
+                                  <input type="hidden" name="idp" value="<?= $no_asset; ?>">
                                   <br>
                                   <br>
                                   <button type="submit" class="btn btn-danger" name="hapusasset">yes, delete</button>
@@ -259,7 +259,7 @@
                         </div>
 
                         <!-- details -->
-                        <div class="modal fade" id="details<?= $id; ?>">
+                        <div class="modal fade" id="details<?= $no_asset; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
@@ -287,7 +287,10 @@
                                   <label>Description</label>
                                   <input type="" name="description" value="<?= $description; ?>" class="form-control" disabled>
                                   <br>
-                                  <input type="hidden" name="idp" value="<?= $id; ?>">
+                                  <label>Status</label>
+                                  <input type="" name="description" value="<?= sts_check($sts); ?>" class="form-control" disabled>
+                                  <br>
+                                  <input type="hidden" name="idp" value="<?= $no_asset; ?>">
                                 </div>
                               </form>
 
