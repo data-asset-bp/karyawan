@@ -52,10 +52,14 @@
               <td><?= $note_checkin; ?></td>
               <td><?= sts_check($sts_chek); ?></td>
               <td>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#checkin<?= $id; ?>">
+                <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkin<?= $id; ?>">
                   Chek In
                 </button>
-
+                <a href="view/export/export_pdf.php">
+                  <button type="button" class="btn btn-info btn-sm ml-2" name="print">
+                    Print
+                  </button>
+                </a>
 
                 <!-- The Modal -->
                 <div class="modal fade" id="checkin<?= $id; ?>">
@@ -75,7 +79,7 @@
                           <input type="text" name="no_asset" value="<?= $no_asset; ?>" class="form-control" disabled>
                           <br>
                           <label>Description</label>
-                          <input type="text" name="description" value="" class="form-control" disabled>
+                          <input type="text" name="description" value="<?= noassettodesc($no_asset); ?>" class="form-control" disabled>
                           <br>
                           <label>Status</label>
                           <select class="form-control" name="sts">
@@ -93,7 +97,7 @@
                           <input type="text" name="note" class="form-control" required>
                           <br>
                           <input type="hidden" name="id" value="<?= $id; ?>">
-                          <button type="submit" class="btn btn-primary" name="checkin">Check In</button>
+                          <button type="submit" class="btn btn-primary btn-sm ml-2" name="checkin">Check In</button>
                         </div>
                       </form>
 
