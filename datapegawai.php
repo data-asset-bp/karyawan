@@ -90,14 +90,17 @@
 															<label>Employee Name</label>
 															<input type="" name="nama" value="<?= $nama; ?>" class="form-control" disabled>
 															<br>
-															<label>Division</label>
-															<input type="" name="div" value="<?= $div; ?>" class="form-control" disabled>
-															<br>
 															<label>BA</label>
 															<input type="" name="ba" value="<?= $ba; ?>" class="form-control" disabled>
 															<br>
 															<label>PA</label>
 															<input type="" name="pa" value="<?= $pa; ?>" class="form-control" disabled>
+															<br>
+															<label>Division</label>
+															<input type="" name="div" value="<?= $div; ?>" class="form-control" disabled>
+															<br>
+															<label>Position</label>
+															<input type="" name="pa" value="<?= $position; ?>" class="form-control" disabled>
 															<br>
 															<input type="hidden" name="idp" value="<?= $idp; ?>">
 														</div>
@@ -128,16 +131,18 @@
 															<label>Employee Name</label>
 															<input type="text" name="nama" value="<?= $nama; ?>" class="form-control" required>
 															<br>
-															<label>Division</label>
-															<input type="text" name="div" value="<?= $div; ?>" class="form-control" required>
-															<br>
 															<label>BA</label>
 															<input type="text" name="ba" value="<?= $ba; ?>" class="form-control" required>
 															<br>
 															<label>PA</label>
 															<input type="text" name="pa" value="<?= $pa; ?>" class="form-control" required>
 															<br>
-
+															<label>Division</label>
+															<input type="text" name="div" value="<?= $div; ?>" class="form-control" required>
+															<br>
+															<label>Position</label>
+															<input type="text" name="pa" value="<?= $position; ?>" class="form-control" required>
+															<br>
 															<input type="hidden" name="idp" value="<?= $idp; ?>">
 															<button type="submit" class="btn btn-primary" name="editpegawai">Submit</button>
 														</div>
@@ -205,17 +210,11 @@
 					<label>Nama Karyawan</label>
 					<input type="text" name="nama" placeholder="Masukkan Nama Pegawai" class="form-control" required>
 					<br>
-					<label>Divisi</label>
-					<select name="div" class="form-control" required>
+					<label>HO/CABANG</label>
+					<select name="ho" class="form-control" required>
 						<option value="" selected disabled>--Pilihan--</option>
-						<option value="BOD">BOD</option>
-						<option value="Corporate Function">Corporate Function</option>
-						<option value="Finance, Accounting & Procurement">Finance, Accounting & Procurement</option>
-						<option value="Marketing & Material Management">Marketing & Material Management</option>
-						<option value="People & Infrastructure">People & Infrastructure</option>
-						<option value="Product Support & Engineering">Product Support & Engineering</option>
-						<option value="Sales & Branch Operation">Sales & Branch Operation</option>
-						<option value="Branch Operations">Branch Operations</option>
+						<option value="HO">1. HO</option>
+						<option value="Cabang">2. Cabang</option>
 					</select>
 					<br>
 					<label>BA</label>
@@ -289,11 +288,17 @@
 						<option value="Tebing Tinggi">b. Tebing Tinggi</option>
 					</select>
 					<br>
-					<label>HO/CABANG</label>
-					<select name="ho" class="form-control" required>
+					<label>Division</label>
+					<select name="div" class="form-control" required>
 						<option value="" selected disabled>--Pilihan--</option>
-						<option value="HO">1. HO</option>
-						<option value="Cabang">2. Cabang</option>
+						<option value="BOD">BOD</option>
+						<option value="Corporate Function">Corporate Function</option>
+						<option value="Finance, Accounting & Procurement">Finance, Accounting & Procurement</option>
+						<option value="Marketing & Material Management">Marketing & Material Management</option>
+						<option value="People & Infrastructure">People & Infrastructure</option>
+						<option value="Product Support & Engineering">Product Support & Engineering</option>
+						<option value="Sales & Branch Operation">Sales & Branch Operation</option>
+						<option value="Branch Operations">Branch Operations</option>
 					</select>
 					<br>
 					<label>Position</label>

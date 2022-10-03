@@ -161,12 +161,3 @@ if (isset($_POST['hapusaset'])) {
 		header('location:indexx.php');
 	}
 }
-?>
-
-
-<!-- view dashboard -->
-<? $keluar2 = DB::table("keluar")
-	->join('barangs', function ($join) {
-		$join->on('keluar.id_barang', '=', 'barangs.id_barang');
-	})->get();
-?>

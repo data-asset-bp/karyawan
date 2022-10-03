@@ -8,7 +8,7 @@
         <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
           Add
         </button>
-        <a href="export.php"><button type="button" class="btn btn-success btn-sm ml-2">Export</button></a>
+        <a href="view/export/export_pdf.php"><button type="button" class="btn btn-success btn-sm ml-2">Export</button></a>
 
         <br><br>
         <div class="card mb-4">
