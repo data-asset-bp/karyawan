@@ -24,7 +24,7 @@
 					</select>
 					<br>
 					<label>Select Type Search</label>
-					<input type="text" placeholder="Input Type Search" name="carinama" class="form-control"><br>
+					<input type="text" placeholder="Search" name="carinama" class="form-control"><br>
 					<input type="submit" class="btn btn-warning btn-sm ml-2" value="Cari" name="cari">
 				</form>
 

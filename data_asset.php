@@ -23,8 +23,8 @@
                 <option value='4'>Asset Description</option>
               </select>
               <br>
-              <label>Select Search Type</label>
-              <input type="text" name="carinama" placeholder="Input Search Type" class="form-control"><br>
+              <label>Search Type</label>
+              <input type="text" name="carinama" placeholder="Search" class="form-control"><br>
               <input type="submit" class="btn btn-warning btn-sm ml-2" value="Search" name="cari">
             </form>
 

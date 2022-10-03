@@ -28,22 +28,22 @@ switch ($_GET['page']) {
     case "chekout":
         include 'data_chekout.php';
         break;
-        // case "view":
-        //     include 'view/status/view.php';
-        //     break;
     case "view":
+        include 'view/status/view.php';
+        break;
+    case "archived":
         include 'view/status/archived.php';
         break;
-    case "view":
+    case "deployable":
         include 'view/status/deployable.php';
         break;
-    case "view":
+    case "deployed":
         include 'view/status/deployed.php';
         break;
-    case "view":
+    case "pending":
         include 'view/status/pending.php';
         break;
-    case "view":
+    case "undeployable":
         include 'view/status/undeployable.php';
         break;
 }
