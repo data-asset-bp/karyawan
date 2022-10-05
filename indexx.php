@@ -113,21 +113,21 @@
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in">
                         <span>01</span>
                         <h4>User Admin</h4>
-                        <a href="/admin.php">
+                        <a href="index.php?page=user">
                             <button class="btn btn-primary" name="data_user.php">Selengkapnya</button>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="100">
                         <span>02</span>
                         <h4>Data Karyawan</h4>
-                        <a href="">
+                        <a href="index.php?page=pegawai">
                             <button class="btn btn-primary" name="datapegawai.php">Selengkapnya</button>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
                         <span>03</span>
                         <h4> Data Asset</h4>
-                        <a href="">
+                        <a href="index.php?page=asset">
                             <button class="btn btn-primary" name="data_asset.php">Selengkapnya</button>
                         </a>
                     </div>
@@ -146,7 +146,10 @@
                     <div class="col-lg-5 d-flex align-items-stretch">
                         <div class="info">
                             <div class="address">
-                                <i class="bi bi-geo-alt"></i>
+                                <a href="https://g.page/pt-bina-pertiwi-jakarta">
+                                    <i class="bi bi-geo-alt">
+                                    </i>
+                                </a>
                                 <h4>Location:</h4>
                                 <p>Jl. Raya Bekasi KM.22, Cakung Barat, Kota Jakarta Timur, DKI Jakarta</p>
                             </div>
@@ -163,7 +166,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 d-flex align-items-stretch">
-                        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps?ll=-6.185225,106.924022&z=16&t=m&hl=id&gl=ID&mapclient=embed&cid=3711677769930078970" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7797.090712900171!2d106.92854601825542!3d-6.1855594878164615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bf5ab1e2203%3A0x3382874435657afa!2sPT.%20Bina%20Pertiwi!5e0!3m2!1sen!2sid!4v1664844465953!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

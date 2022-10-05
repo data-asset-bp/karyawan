@@ -57,7 +57,7 @@
                     Chek In
                   </button>
                 </a>
-                <a href="view/export/export_pdf.php">
+                <a href="export_pdf.php">
                   <button type="button" class="btn btn-success btn-sm ml-2" name="print">
                     Print
                   </button>

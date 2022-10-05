@@ -12,7 +12,7 @@
 
         <br><br>
         <div class="card mb-4">
-          <div class="card-header">
+          <div class="card-header ">
             <form method="post">
               <label>Select Search Type</label>
               <select class="form-control" name="pil">
@@ -42,7 +42,7 @@
                     <td>Description</td>
                     <td>Status</td>
                     <td>Checkin/Checkout</td>
-                    <td>More</td>
+                    <td style="text-align:center">More</td>
 
                   </tr>
                 </thead>

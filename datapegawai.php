@@ -23,7 +23,7 @@
 								<td>PA</td>
 								<td>HO/CAB</td>
 								<td>Position</td>
-								<td>More</td>
+								<td style="text-align:center">More</td>
 
 							</tr>
 						</thead>
