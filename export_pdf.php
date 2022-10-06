@@ -12,7 +12,7 @@ $html = '<html><head>
 </head>
 <body>
     <div>
-        <h3 style="text-align:center">Peminjaman Asset</h3>
+        <h3 style="text-align:center">Data Asset</h3>
     </div>
     <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover" border="1">
         <tr>
