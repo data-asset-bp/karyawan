@@ -43,8 +43,8 @@
               <td><?= nrptonama($Nrp); ?></td>
               <td><?= $no_asset; ?></td>
               <td><?= noassettodesc($no_asset); ?></td>
-              <td><?= $tgl_checkout; ?></td>
-              <td><?= $tgl_checkin; ?></td>
+              <td><?= date('d M Y', strtotime($data['tgl_chekout'])) ?></td>
+              <td><?= date('d M Y', strtotime($data['tgl_chekin'])) ?></td>
               <td><?= $note_checkout; ?></td>
               <td><?= $note_checkin; ?></td>
               <td><?= sts_check($sts_chek); ?></td>
@@ -133,10 +133,10 @@
                           <input type="" name="no_asset" value="<?= noassettodesc($no_asset); ?>" class="form-control" disabled>
                           <br>
                           <label>Check Out Date</label>
-                          <input type="" name="date_checkout" value="<?= $tgl_checkout; ?>" class="form-control" disabled>
+                          <input type="" name="date_checkout" value="<?= date('d M Y', strtotime($data['tgl_chekout'])) ?>" class="form-control" disabled>
                           <br>
                           <label>Check In Date</label>
-                          <input type="" name="date_checkin" value="<?= $tgl_checkin; ?>" class="form-control" disabled>
+                          <input type="" name="date_checkin" value="<?= date('d M Y', strtotime($data['tgl_chekin'])) ?>" class="form-control" disabled>
                           <br>
                           <label>Check Out Notes</label>
                           <input type="" name="note_checkout" value="<?= $note_checkout; ?>" class="form-control" disabled>

@@ -8,7 +8,7 @@
         <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
           Add
         </button>
-        <a href="view/export/export_pdf.php"><button type="button" class="btn btn-success btn-sm ml-2">Export</button></a>
+        <a href="export_pdf.php"><button type="button" class="btn btn-success btn-sm ml-2">Export</button></a>
 
         <br><br>
         <div class="card mb-4">
@@ -82,7 +82,7 @@
                       <td><?= $no_asset; ?></td>
                       <td><?= $type; ?></td>
                       <td><?= $no_serial; ?></td>
-                      <td><?= $date; ?></td>
+                      <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                       <td><?= $description; ?></td>
                       <td><?= sts_check($sts); ?></td>
                       <td>
@@ -282,7 +282,7 @@
                                   <input type="" name="no_serial" value="<?= $no_serial; ?>" class="form-control" disabled>
                                   <br>
                                   <label>Date</label>
-                                  <input type="" name="date" value="<?= $date; ?>" class="form-control" disabled>
+                                  <input type="" name="date" value="<?= date('d M Y', strtotime($data['cap_date'])) ?>" class="form-control" disabled>
                                   <br>
                                   <label>Description</label>
                                   <input type="" name="description" value="<?= $description; ?>" class="form-control" disabled>

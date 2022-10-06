@@ -153,6 +153,7 @@
 									<td><?= $asset_type; ?></td>
 									<td><?= $no_serial; ?></td>
 									<td><?= $cap_date; ?></td>
+									<!-- <td><?= date('d M Y', strtotime($data_as['cap_date'])) ?></td> -->
 									<td><?= $asset_description; ?></td>
 									<td><?= sts_check($sts_co); ?></td>
 
