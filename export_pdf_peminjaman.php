@@ -3,8 +3,12 @@
 require_once __DIR__ . '/vendor/autoload.php';
 
 include 'koneksi.php';
-$data = mysqli_query($con, "SELECT * FROM data_chek_asset");
+$sql = mysqli_query($con, "SELECT * FROM data_chek_asset, user ORDER BY tgl_chekout DESC");
 $no = 1;
+
+while ($data = mysqli_fetch_array($sql)) {
+    $no_asset = $data['no_asset'];
+}
 
 $mpdf = new \Mpdf\Mpdf();
 $html = '
@@ -37,23 +41,23 @@ $html = '
         </p>
         <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover" border="1" >
             <tr>
-                <th>No</th>
-                <th>Asset Number</th>
-                <th>Asset Type</th>
-                <th>Serial Number</th>
-                <th>Asset Description</th>
-                <th>Date</th>
+                <th style="text-align:center;">No</th>
+                <th style="text-align:center;">Asset Number</th>
+                <th style="text-align:center;">Asset Type</th>
+                <th style="text-align:center;">Serial Number</th>
+                <th style="text-align:center;">Asset Description</th>
+                <th style="text-align:center;">Date</th>
             </tr>
             ';
-foreach ($data as $d) {
+foreach ($sql as $data) {
     $html .= '
             <tr>
                 <td style="text-align:center;">' . $no++ . '</td>
-                <td>' . $d['no_asset'] . '</td>
-                <td>' . $d['no_asset'] . '</td>
-                <td>' . $d['no_asset'] . '</td>
-                <td>' . $d['no_asset'] . '</td>
-                <td style="text-align:center;">' . date('d M Y', strtotime($d['tgl_chekout'])) . '</td>
+                <td style="text-align:center;">' . $no_asset . '</td>
+                <td style="text-align:center;">' . $data['no_asset'] . '</td>
+                <td style="text-align:center;">' . $data['no_asset'] . '</td>
+                <td style="text-align:center;">' . $data['no_asset'] . '</td>
+                <td style="text-align:center;">' . date('d M Y', strtotime($data['tgl_chekout'])) . '</td>
             </tr>
             ';
 }

@@ -1,10 +1,9 @@
 <main>
   <div class="container-fluid">
     <h1 class="mt-4">Proses Checkin</h1>
-
-
-    <br><br>
-
+    <a href="export_pdf_peminjaman.php">
+      <button type="button" class="btn btn-success btn-sm ml-2">Export</button>
+    </a>
   </div>
   <div class="card-body">
     <div class="table table-responsive">

@@ -62,7 +62,7 @@
                     <th>Asset Type</th>
                     <th>Serial Number</th>
                     <th>Asset Description</th>
-                    <th>Date</th>
+                    <th style="text-align:center;">Date</th>
                 </tr>
                 <tr>
                     <td style="text-align:center;"><?= $no++ ?></td>
@@ -70,7 +70,7 @@
                     <td><?= $asset_type; ?></td>
                     <td><?= $no_serial; ?></td>
                     <td><?= $description; ?></td>
-                    <td><?= date('d M Y', strtotime($cap_date)) ?></td>
+                    <td style="text-align:center;"><?= date('d M Y', strtotime($cap_date)) ?></td>
                 </tr>
             </table>
             <br>
