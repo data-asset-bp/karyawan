@@ -28,8 +28,8 @@ switch ($_GET['page']) {
     case "chekout":
         include 'data_chekout.php';
         break;
-    case "view":
-        include 'view/status/view.php';
+    case "export":
+        include 'export.php';
         break;
     case "archived":
         include 'view/status/archived.php';

@@ -45,16 +45,6 @@ function tanggal_indo($tanggal)
 	return $split[2] . ' ' . $bulan[ (int)$split[1] ] . ' ' . $split[0];
 }
 
-//FUNGSI MERUBAH ID JABATAN KE NAMA JABATAN
-function jabatan($id)
-{
-	include("koneksi.php");
-	$sql="SELECT nm_jabatan FROM r_jabatan WHERE id_jabatan='$id'";
-	$hasil=mysqli_query($con,$sql);							
-	$data=mysqli_fetch_array($hasil);
-	return $data['nm_jabatan'];
-}
-
 //Merubah NRp ke nama karyawan
 function nrptonama($id)
 {

@@ -42,4 +42,4 @@ $mpdf = new \Mpdf\Mpdf(['format' => $size]);
 $mpdf->AddPage($orientation);
 
 $mpdf->WriteHTML($html);
-$mpdf->Output("Cetak Data Asset.pdf", I);
+$mpdf->Output("Cetak Data Asset.pdf", 'I');

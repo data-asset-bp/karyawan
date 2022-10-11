@@ -6,26 +6,28 @@
       <div class="card-header">
         <!-- Button to Open the Modal -->
         <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
-          Add
+          Tambah
         </button>
-        <a href="export_pdf.php"><button type="button" class="btn btn-success btn-sm ml-2">Export</button></a>
+        <a href="export_pdf_asset.php">
+          <button type="button" class="btn btn-success btn-sm ml-2">Export</button>
+        </a>
 
         <br><br>
         <div class="card mb-4">
-          <div class="card-header ">
+          <div class="card-header">
             <form method="post">
-              <label>Select Search Type</label>
+              <label>Pilih Jenis Pencarian</label>
               <select class="form-control" name="pil">
-                <option selected disabled>--Select Search Type--</option>
-                <option value='1'>Asset Number</option>
-                <option value='2'>Type Asset</option>
-                <option value='3'>Serial Number</option>
-                <option value='4'>Asset Description</option>
+                <option selected disabled>--Pilih Jenis Pencarian--</option>
+                <option value='1'>NO_ASSET</option>
+                <option value='2'>ASSET TYPE</option>
+                <option value='3'>NO SERIAL</option>
+                <option value='4'>ASSET DESCRIPTION</option>
               </select>
               <br>
-              <label>Search Type</label>
-              <input type="text" name="carinama" placeholder="Search" class="form-control"><br>
-              <input type="submit" class="btn btn-warning btn-sm ml-2" value="Search" name="cari">
+              <label>Masukkan Jenis Pencarian</label>
+              <input type="text" name="carinama" class="form-control" placeholder="Search"><br>
+              <input type="submit" class="btn btn-warning btn-sm ml-2" value="Cari" name="cari">
             </form>
 
           </div>
@@ -34,36 +36,35 @@
               <table id="example1" class="table table-bordered table-striped table-hover">
                 <thead>
                   <tr>
-                    <td>No</td>
-                    <td>Asset Number</td>
-                    <td>Type Asset</td>
-                    <td>Serial Number</td>
-                    <td>Date</td>
-                    <td>Description</td>
-                    <td>Status</td>
+                    <td>NO</td>
+                    <td>NO ASSET</td>
+                    <td>ASSET TYPE</td>
+                    <td>NO SERIAL</td>
+                    <td>CAP DATE</td>
+                    <td>DESCRIPTION</td>
+                    <td>STATUS</td>
                     <td>Checkin/Checkout</td>
-                    <td style="text-align:center">More</td>
+                    <td>Action</td>
 
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-
                   $namacari = $_POST['carinama'];
                   $pil = $_POST['pil'];
                   $no = 0;
 
                   //mengambil data pegawai
                   if ($pil == 1) {
-                    $sql = mysqli_query($con, "SELECT * FROM data_asset where no_asset like '%$namacari%' ");
+                    $sql = mysqli_query($con, "SELECT * FROM data_asset where no_asset like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
                   } elseif ($pil == 2) {
-                    $sql = mysqli_query($con, "SELECT * FROM data_asset where asset_type like '%$namacari%' ");
+                    $sql = mysqli_query($con, "SELECT * FROM data_asset where asset_type like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
                   } elseif ($pil == 3) {
-                    $sql = mysqli_query($con, "SELECT * FROM data_asset where no_serial like '%$namacari%' ");
+                    $sql = mysqli_query($con, "SELECT * FROM data_asset where no_serial like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
                   } elseif ($pil == 4) {
-                    $sql = mysqli_query($con, "SELECT * FROM data_asset where asset_description like '%$namacari%' ");
+                    $sql = mysqli_query($con, "SELECT * FROM data_asset where asset_description like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
                   } else {
-                    $sql = mysqli_query($con, "SELECT * FROM data_asset");
+                    $sql = mysqli_query($con, "SELECT * FROM data_asset where NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset = data_asset.no_asset)ORDER BY cap_date DESC");
                   }
 
                   while ($data = mysqli_fetch_array($sql)) {
@@ -86,18 +87,18 @@
                       <td><?= $description; ?></td>
                       <td><?= sts_check($sts); ?></td>
                       <td>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>">
+                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $id; ?>">
                           CHECKOUT
                         </button>
 
                         <!-- Checkout The Modal -->
-                        <div class="modal fade" id="checkout<?= $no_asset; ?>">
+                        <div class="modal fade" id="checkout<?= $id; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
                               <!-- Modal Header -->
                               <div class="modal-header">
-                                <h4 class="modal-title">Asset Checkout Process</h4>
+                                <h4 class="modal-title">Proses Checkout Asset</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                               </div>
 
@@ -105,20 +106,19 @@
                               <form method="post">
                                 <div class="modal-body">
                                   <label>No. Asset</label>
-                                  <input type="text" name="no_asset" value="<?= $no_asset; ?>" class="form-control" required readonly>
+                                  <input type="text" name="no_asset" value="<?= $no_asset; ?>" class="form-control" disabled>
                                   <br>
                                   <label>Type Asset</label>
-                                  <input type="text" name="type" value="<?= $type; ?>" class="form-control" required readonly>
+                                  <input type="text" name="type" value="<?= $type; ?>" class="form-control" disabled>
                                   <br>
                                   <label>No. Serial</label>
-                                  <input type="text" name="no_serial" value="<?= $no_serial; ?>" class="form-control" required readonly>
+                                  <input type="text" name="no_serial" value="<?= $no_serial; ?>" class="form-control" disabled>
                                   <br>
                                   <label>Asset Description</label>
-                                  <input type="text" name="description" value="<?= $description; ?>" class="form-control" required readonly>
+                                  <input type="text" name="description" value="<?= $description; ?>" class="form-control" disabled>
                                   <br>
-                                  <label>Status</label>
+                                  <label>STATUS</label>
                                   <select class="form-control" name="sts">
-                                    <option selected disabled>--Select Status--</option>
                                     <option value='1'>Pending</option>
                                     <option value='2'>UnDiployable</option>
                                     <option value='3'>Deployed</option>
@@ -139,13 +139,14 @@
                                             <li class="nav-item">
                                               <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Asset</a>
                                             </li>
+
                                           </ul>
                                         </div>
                                         <div class="card-body">
                                           <div class="tab-content" id="custom-tabs-one-tabContent">
                                             <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
                                               <select class="form-control" style="width: 100%;" name="Nrp">
-                                                <option value="" selected disabled>--Pilih nama--</option>
+                                                <option value="">Pilih nama</option>
                                                 <?PHP
                                                 //mengambil data karyawan
                                                 $sql_kary = mysqli_query($con, "SELECT * FROM data_karyawan order by Nama_karyawan ASC");
@@ -158,7 +159,7 @@
                                               </select>
                                             </div>
                                             <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
-                                              <input type="text" value="<?= $description; ?>" class="form-control" required readonly>
+                                              <input type="text" value="<?= $description; ?>" class="form-control" disabled>
                                             </div>
 
                                           </div>
@@ -167,13 +168,15 @@
                                       </div>
                                       <br>
 
-                                      <label>Checkout Date</label>
+                                      <br>
+
+                                      <label>CHECKOUT DATE</label>
                                       <input type="date" name="tgl" class="form-control" required>
                                       <br>
-                                      <label>Note</label>
-                                      <input type="text" name="note" class="form-control" placeholder="Input Notes" required>
+                                      <label>NOTE</label>
+                                      <input type="text" name="note" class="form-control" required>
                                       <br>
-                                      <input type="hidden" name="idp" value="<?= $no_asset; ?>">
+                                      <input type="hidden" name="idp" value="<?= $id; ?>">
                                       <button type="submit" class="btn btn-primary" name="checkout">Checkout</button>
                                     </div>
                               </form>
@@ -184,18 +187,15 @@
                       </td>
 
                       <td>
-                        <button type="button" class="btn btn-info btn-sm ml-2" data-toggle="modal" data-target="#details<?= $no_asset; ?>">
-                          Details
-                        </button>
-                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $no_asset; ?>">
+                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $id; ?>">
                           Edit
                         </button>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $no_asset; ?>">
+                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $id; ?>">
                           Delete
                         </button>
 
                         <!-- edit The Modal -->
-                        <div class="modal fade" id="edit<?= $no_asset; ?>">
+                        <div class="modal fade" id="edit<?= $id; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
@@ -208,23 +208,23 @@
                               <!-- Modal body -->
                               <form method="post">
                                 <div class="modal-body">
-                                  <label>No Asset</label>
-                                  <input type="text" name="no_asset" placeholder="Input No Asset" value="<?= $no_asset; ?>" class="form-control" required>
+                                  <label>No. Asset</label>
+                                  <input type="text" name="no_asset" placeholder="No Asset" value="<?= $no_asset; ?>" class="form-control" required>
                                   <br>
                                   <label>Type Asset</label>
-                                  <input type="text" name="type" placeholder="Input Type Asset" value="<?= $type; ?>" class="form-control" required>
+                                  <input type="text" name="type" placeholder="Type Asset" value="<?= $type; ?>" class="form-control" required>
                                   <br>
-                                  <label>No Serial</label>
-                                  <input type="text" name="no_serial" placeholder="Input No Serial" value="<?= $no_serial; ?>" class="form-control" required>
+                                  <label>No. Serial</label>
+                                  <input type="text" name="no_serial" placeholder="No Serial" value="<?= $no_serial; ?>" class="form-control" required>
                                   <br>
-                                  <label>Date</label>
-                                  <input type="text" name="date" value="<?= $date; ?>" class="form-control" required>
+                                  <label>Cap Date</label>
+                                  <input type="date" name="date" value="<?= $date; ?>" class="form-control" required>
                                   <br>
                                   <label>Description</label>
-                                  <input type="text" name="description" placeholder="Input Description" value="<?= $description; ?>" class="form-control" required>
+                                  <input type="text" name="description" placeholder="Description" value="<?= $description; ?>" class="form-control" required>
                                   <br>
 
-                                  <input type="hidden" name="idp" value="<?= $no_asset; ?>">
+                                  <input type="hidden" name="idp" value="<?= $id; ?>">
                                   <button type="submit" class="btn btn-primary" name="editasset">Simpan</button>
                                 </div>
                               </form>
@@ -234,70 +234,29 @@
                         </div>
 
                         <!-- delete The Modal -->
-                        <div class="modal fade" id="delete<?= $no_asset; ?>">
+                        <div class="modal fade" id="delete<?= $id; ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
 
                               <!-- Modal Header -->
                               <div class="modal-header">
-                                <h4 class="modal-title">Delete Asset</h4>
+                                <h4 class="modal-title">Hapus Asset</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                               </div>
 
                               <!-- Modal body -->
                               <form method="post">
                                 <div class="modal-body">
-                                  Are you sure you want to delete? <?= $no_asset; ?>?
-                                  <input type="hidden" name="idp" value="<?= $no_asset; ?>">
+                                  Apakah anda yakin ingin menghapus nomor asset <?= $no_asset; ?>?
+                                  <input type="hidden" name="idp" value="<?= $id; ?>">
                                   <br>
                                   <br>
-                                  <button type="submit" class="btn btn-danger" name="hapusasset">yes, delete</button>
+                                  <button type="submit" class="btn btn-danger" name="hapusasset">Hapus</button>
                                 </div>
                               </form>
                             </div>
                           </div>
                         </div>
-
-                        <!-- details -->
-                        <div class="modal fade" id="details<?= $no_asset; ?>">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-
-                              <!-- Modal Header -->
-                              <div class="modal-header">
-                                <h4 class="modal-title">Details Asset Data</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-
-                              <!-- Modal body -->
-                              <form method="post">
-                                <div class="modal-body">
-                                  <label>No Asset</label>
-                                  <input type="" name="no_asset" value="<?= $no_asset; ?>" class="form-control" disabled>
-                                  <br>
-                                  <label>Type Asset</label>
-                                  <input type="" name="type" value="<?= $type; ?>" class="form-control" disabled>
-                                  <br>
-                                  <label>No Serial</label>
-                                  <input type="" name="no_serial" value="<?= $no_serial; ?>" class="form-control" disabled>
-                                  <br>
-                                  <label>Date</label>
-                                  <input type="" name="date" value="<?= date('d M Y', strtotime($data['cap_date'])) ?>" class="form-control" disabled>
-                                  <br>
-                                  <label>Description</label>
-                                  <input type="" name="description" value="<?= $description; ?>" class="form-control" disabled>
-                                  <br>
-                                  <label>Status</label>
-                                  <input type="" name="description" value="<?= sts_check($sts); ?>" class="form-control" disabled>
-                                  <br>
-                                  <input type="hidden" name="idp" value="<?= $no_asset; ?>">
-                                </div>
-                              </form>
-
-                            </div>
-                          </div>
-                        </div>
-
                       </td>
                     </tr>
                   <?php
@@ -319,31 +278,31 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Add Asset</h4>
+        <h4 class="modal-title">Tambah Data Asset</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <form method="post">
         <div class="modal-body">
-          <label>Asset Number</label>
+          <label>No. Asset</label>
           <input type="text" name="no_asset" placeholder="No Asset" class="form-control" required>
           <br>
           <label>Type Asset</label>
-          <input type="text" name="type" placeholder="Aset Type" class="form-control" required>
+          <input type="text" name="type" placeholder="Type Asset" class="form-control" required>
           <br>
-          <label>Serial Number</label>
+          <label>No. Serial</label>
           <input type="text" name="no_serial" placeholder="No Serial" class="form-control" required>
           <br>
-          <label>Date</label>
+          <label>Cap Date</label>
           <input type="date" name="cap_date" placeholder="Cap Date" class="form-control" required>
           <br>
-          <label>Asset Description</label>
+          <label>Description</label>
           <input type="text" name="description" placeholder="Description" class="form-control" required>
           <br>
 
 
-          <button type="submit" class="btn btn-primary" name="tambahasset">Save</button>
+          <button type="submit" class="btn btn-primary btn-sm ml-2" name="tambahasset">Simpan</button>
         </div>
       </form>
 
