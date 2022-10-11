@@ -96,18 +96,18 @@
                         Home
                     </a>
                     <a class="nav-link" href="index.php?page=user">
-                        <div class="sb-nav-link-icon"><i class="far fa-bookmark" aria-hidden="true"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
                         User
                     </a>
-                    <button class="dropdown-btn"><i class="fas fa-sd-card" aria-hidden="true"></i> <a>Asset Data </a>
+                    <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><a>Asset Data</a>
                     </button>
-                    <div class="dropdown-container">
-                        <li><a class="nav-link" href="index.php?page=asset">All</a></li>
-                        <li><a class="nav-link" href="tambahba.php">Archived</a></li>
-                        <li><a class="nav-link" href="tambahpa.php">Deployable</a></li>
-                        <li><a class="nav-link" href="tambahpa.php">Deployed</a></li>
-                        <li><a class="nav-link" href="tambahpa.php">Pending</a></li>
-                        <li><a class="nav-link" href="tambahpa.php">Un-Deployable</a></li>
+                    <div class="dropdown-container btn-sm ml-2">
+                        <li><a class="nav-link" href="index.php?page=asset"><i class="fa fa-circle"></i>All</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_archived"><i class="fa fa-times"></i>Archived</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_deployable"><i class="fa fa-circle"></i>Deployable</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_deployed"><i class="fa fa-circle"></i>Deployed</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_pending"><i class="fa fa-circle"></i>Pending</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_undeployable"><i class="fa fa-circle"></i>Un-Deployable</a></li>
                     </div>
                     <a class="nav-link" href="index.php?page=karyawan">
                         <div class="sb-nav-link-icon"><i class="far fa-address-card" aria-hidden="true"></i></div>
@@ -123,12 +123,12 @@
                         Search Employee Asset Data
                     </a>
 
-                    <button class="dropdown-btn"><i class="fas fa-cogs" aria-hidden="true"></i> <a>Pengaturan </a>
+                    <button class="dropdown-btn btn-sm ml-2"><i class="fas fa-cogs" aria-hidden="true"></i> <a>Pengaturan </a>
                     </button>
-                    <div class="dropdown-container">
-                        <li><a class="nav-link" href="tambahdivisi.php">Tambah Divisi </a></li>
-                        <li><a class="nav-link" href="tambahba.php">Tambah Branch Area</a></li>
-                        <li><a class="nav-link" href="tambahpa.php">Tambah Personal Area</a>
+                    <div class="dropdown-container btn-sm ml-2">
+                        <li><a class="nav-link" href="tambah_divisi.php">Tambah Divisi </a></li>
+                        <li><a class="nav-link" href="tambah_ba.php">Tambah Branch Area</a></li>
+                        <li><a class="nav-link" href="tambah_pa.php">Tambah Personal Area</a>
                         <li>
                     </div>
 

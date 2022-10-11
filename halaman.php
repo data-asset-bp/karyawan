@@ -28,22 +28,37 @@ switch ($_GET['page']) {
     case "chekout":
         include 'data_chekout.php';
         break;
+
+        // Export
     case "export":
         include 'export.php';
         break;
-    case "archived":
-        include 'view/status/archived.php';
+
+        // Status
+    case "status_archived":
+        include 'status_archived.php';
         break;
-    case "deployable":
-        include 'view/status/deployable.php';
+    case "status_deployable":
+        include 'status_deployable.php';
         break;
-    case "deployed":
-        include 'view/status/deployed.php';
+    case "status_deployed":
+        include 'status_deployed.php';
         break;
-    case "pending":
-        include 'view/status/pending.php';
+    case "status_pending":
+        include 'status_pending.php';
         break;
-    case "undeployable":
-        include 'view/status/undeployable.php';
+    case "status_undeployable":
+        include 'status_undeployable.php';
+        break;
+
+        // Tambah Kategori
+    case "tambah_ba":
+        include 'tambah_ba.php';
+        break;
+    case "tambah_divisi":
+        include 'tambah_divisi.php';
+        break;
+    case "tambah_pa":
+        include 'tambah_pa.php';
         break;
 }

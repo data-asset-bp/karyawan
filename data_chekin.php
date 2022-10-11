@@ -57,8 +57,8 @@
                     Chek In
                   </button>
                 </a>
-                <a href="export.php" data-target="#print<?= $data; ?>">
-                  <button type="button" class="btn btn-success btn-sm ml-2" name="print">
+                <a href="export.php" data-toggle="row" data-target="#print<?= $data; ?>">
+                  <button type="button" class="btn btn-success btn-sm ml-2">
                     Print
                   </button>
                 </a>
