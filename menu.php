@@ -102,12 +102,12 @@
                     <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><a>Asset Data</a>
                     </button>
                     <div class="dropdown-container btn-sm ml-2">
-                        <li><a class="nav-link" href="index.php?page=asset"><i class="fa fa-circle"></i>All</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_archived"><i class="fa fa-times"></i>Archived</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_deployable"><i class="fa fa-circle"></i>Deployable</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_deployed"><i class="fa fa-circle"></i>Deployed</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_pending"><i class="fa fa-circle"></i>Pending</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_undeployable"><i class="fa fa-circle"></i>Un-Deployable</a></li>
+                        <li><a class="nav-link" href="index.php?page=asset"></i>All</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_archived"></i>Archived</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_deployable"></i>Deployable</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_deployed"></i>Deployed</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_pending"></i>Pending</a></li>
+                        <li><a class="nav-link" href="index.php?page=status_undeployable"></i>Un-Deployable</a></li>
                     </div>
                     <a class="nav-link" href="index.php?page=karyawan">
                         <div class="sb-nav-link-icon"><i class="far fa-address-card" aria-hidden="true"></i></div>
