@@ -27,7 +27,7 @@ $no = 1;
 foreach ($data as $d) {
     $html .=
         '<tr>
-        <td>' . $no++ . '</td>
+        <td style="text-align:center">' . $no++ . '</td>
         <td>' . $d['no_asset'] . '</td>
         <td>' . $d['asset_type'] . '</td>
         <td>' . $d['no_serial'] . '</td>
