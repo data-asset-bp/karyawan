@@ -5,8 +5,8 @@ session_start();
 include("koneksi.php");
 
 
-//menambah pegawai
-if (isset($_POST['tambahpegawai'])) {
+//menambah karyawan
+if (isset($_POST['tambah_karyawan'])) {
 	$nrp = $_POST['nrp'];
 	$nama = $_POST['nama'];
 	$div = $_POST['div'];
@@ -20,7 +20,7 @@ if (isset($_POST['tambahpegawai'])) {
 
 	if ($addtotable) {
 
-		header('location:index.php?page=pegawai');
+		header('location:index.php?page=karyawan');
 	} else {
 		echo 'Gagal';
 		header('location:index.php');
@@ -28,8 +28,8 @@ if (isset($_POST['tambahpegawai'])) {
 }
 
 
-//update data pegawai
-if (isset($_POST['editpegawai'])) {
+//update data karyawan
+if (isset($_POST['edit_karyawan'])) {
 	$idp = $_POST['idp'];
 	$nrp = $_POST['nrp'];
 	$nama = $_POST['nama'];
@@ -40,20 +40,20 @@ if (isset($_POST['editpegawai'])) {
 
 	$query = mysqli_query($con, "update data_karyawan set Nrp='$nrp', Nama_karyawan='$nama', New_Div='$div', New_BA='$ba', New_PA='$pa' where id_karyawan='$idp'");
 	if ($query) {
-		header('location:index.php?page=pegawai');
+		header('location:index.php?page=karyawan');
 	} else {
 		echo 'Gagal';
 		header('location:index.php');
 	}
 }
 
-//menghapus data pegawai
-if (isset($_POST['hapuspegawai'])) {
+//menghapus data karyawan
+if (isset($_POST['hapus_karyawan'])) {
 	$idp = $_POST['idp'];
 
 	$hapus = mysqli_query($con, "delete from  data_karyawan where id_karyawan='$idp'");
 	if ($hapus) {
-		header('location:index.php?page=pegawai');
+		header('location:index.php?page=karyawan');
 	} else {
 		echo 'Gagal';
 		header('location:index.php');
@@ -130,7 +130,7 @@ if (isset($_POST['tambahasset'])) {
 }
 
 
-//update data pegawai
+//update data asset
 if (isset($_POST['editasset'])) {
 	$idp = $_POST['idp'];
 	$no_asset = $_POST['no_asset'];

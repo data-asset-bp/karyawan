@@ -5,8 +5,8 @@ session_start();
 include("koneksi.php");
 
 
-//menambah pegawai
-if (isset($_POST['tambahkaryawan'])) {
+//menambah karyawan
+if (isset($_POST['tambah_karyawan'])) {
 	$nrp = $_POST['nrp'];
 	$nama = $_POST['nama'];
 	$div = $_POST['div'];
@@ -28,8 +28,8 @@ if (isset($_POST['tambahkaryawan'])) {
 }
 
 
-//update data pegawai
-if (isset($_POST['editkaryawan'])) {
+//update data karyawan
+if (isset($_POST['edit_karyawan'])) {
 	$idp = $_POST['idp'];
 	$nrp = $_POST['nrp'];
 	$nama = $_POST['nama'];
@@ -47,8 +47,8 @@ if (isset($_POST['editkaryawan'])) {
 	}
 }
 
-//menghapus data pegawai
-if (isset($_POST['hapuskaryawan'])) {
+//menghapus data karyawan
+if (isset($_POST['hapus_karyawan'])) {
 	$idp = $_POST['idp'];
 
 	$hapus = mysqli_query($con, "delete from  data_karyawan where id_karyawan='$idp'");
@@ -130,7 +130,7 @@ if (isset($_POST['tambahaset'])) {
 }
 
 
-//update data pegawai
+//update data asset
 if (isset($_POST['editaset'])) {
 	$idp = $_POST['idp'];
 	$no_asset = $_POST['no_asset'];

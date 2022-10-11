@@ -23,7 +23,6 @@
                                         <td>Name</td>
                                         <td>USERNAME</td>
                                         <td>PASSWORD</td>
-                                        
                                         <td>More</td>
                                         
                                     </tr>
@@ -33,7 +32,7 @@
                                    
                                     $no=0;
                                     
-                                    //mengambil data pegawai
+                                    //mengambil data user
                                     $sql="SELECT * FROM user";
                                     $hasil=mysqli_query($con,$sql);
                                     $jumlah=mysqli_num_rows($hasil);

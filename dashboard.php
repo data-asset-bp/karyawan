@@ -61,7 +61,7 @@
               <div class="icon">
                 <i class="fa fa-user-circle"></i>
               </div>
-              <a href="index.php?page=pegawai" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="index.php?page=karyawan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

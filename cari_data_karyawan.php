@@ -59,7 +59,7 @@
 
 							$no = 0;
 
-							//mengambil data pegawai
+							//mengambil data karyawan
 							if ($pil == 1) {
 								$sql = mysqli_query($con, "SELECT * FROM data_karyawan where Nrp like '%$namacari%' ");
 							} elseif ($pil == 2) {

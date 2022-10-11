@@ -39,9 +39,9 @@
                     <li><a class="nav-link" href="index.php?page=user">User Admin</a></li>
                     <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a class="nav-link" href="index.php?page=pegawai">Data Karyawan</a></li>
+                            <li><a class="nav-link" href="index.php?page=karyawan">Data Karyawan</a></li>
                             <li>
-                                <a class="nav-link" href="index.php?page=caripegawai">Pencarian</a>
+                                <a class="nav-link" href="index.php?page=cari_karyawan">Pencarian</a>
                             </li>
                             <li><a class="nav-link" href="index.php?page=asset">Data Asset</a></li>
                         </ul>
@@ -114,21 +114,21 @@
                         <span>01</span>
                         <h4>User Admin</h4>
                         <a href="index.php?page=user">
-                            <button class="btn btn-primary" name="data_user.php">Selengkapnya</button>
+                            <button class="btn btn-primary" name="data_user">Selengkapnya</button>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="100">
                         <span>02</span>
                         <h4>Data Karyawan</h4>
-                        <a href="index.php?page=pegawai">
-                            <button class="btn btn-primary" name="datapegawai.php">Selengkapnya</button>
+                        <a href="index.php?page=karyawan">
+                            <button class="btn btn-primary" name="data_karyawan">Selengkapnya</button>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
                         <span>03</span>
                         <h4> Data Asset</h4>
                         <a href="index.php?page=asset">
-                            <button class="btn btn-primary" name="data_asset.php">Selengkapnya</button>
+                            <button class="btn btn-primary" name="data_asset">Selengkapnya</button>
                         </a>
                     </div>
                 </div>

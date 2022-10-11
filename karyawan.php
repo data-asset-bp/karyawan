@@ -34,7 +34,7 @@
 
 							$no = 0;
 
-							//mengambil data pegawai
+							//mengambil data karyawan
 							$sql = "SELECT * FROM data_karyawan";
 							$hasil = mysqli_query($con, $sql);
 							$jumlah = mysqli_num_rows($hasil);
@@ -96,7 +96,7 @@
 															<br>
 
 															<input type="hidden" name="idp" value="<?= $idp; ?>">
-															<button type="submit" class="btn btn-primary" name="editpegawai">Submit</button>
+															<button type="submit" class="btn btn-primary" name="edit_karyawan">Submit</button>
 														</div>
 													</form>
 
@@ -122,7 +122,7 @@
 															<input type="hidden" name="idp" value="<?= $idp; ?>">
 															<br>
 															<br>
-															<button type="submit" class="btn btn-danger" name="hapuspegawai">Submit</button>
+															<button type="submit" class="btn btn-danger" name="hapus_karyawan">Submit</button>
 														</div>
 													</form>
 												</div>
@@ -158,7 +158,7 @@
 				<div class="modal-body">
 					<input type="text" name="nrp" placeholder="Nrp" class="form-control" required>
 					<br>
-					<input type="text" name="nama" placeholder="Nama Pegawai" class="form-control" required>
+					<input type="text" name="nama" placeholder="Nama Karyawan" class="form-control" required>
 					<br>
 					<label>Divisi</label>
 					<select name="div" class="form-control" required>
@@ -256,7 +256,7 @@
 					<br>
 					<input type="text" name="position" placeholder="Position" class="form-control" required>
 					<br>
-					<button type="submit" class="btn btn-primary" name="tambahpegawai">Submit</button>
+					<button type="submit" class="btn btn-primary" name="tambah_karyawan">Submit</button>
 				</div>
 			</form>
 

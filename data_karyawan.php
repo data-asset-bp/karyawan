@@ -24,7 +24,6 @@
 								<td>DIVISI</td>
 								<td>BRANCH AREA</td>
 								<td>PERSONAL AREA</td>
-
 								<td>POSITION</td>
 								<td>AKSI</td>
 
@@ -35,7 +34,7 @@
 
 							$no = 0;
 
-							//mengambil data pegawai
+							//mengambil data karyawan
 							$sql = "SELECT * FROM data_karyawan";
 							$hasil = mysqli_query($con, $sql);
 							$jumlah = mysqli_num_rows($hasil);
@@ -105,7 +104,7 @@
 															<input type="text" name="pa" value="<?= $position; ?>" class="form-control" required>
 															<br>
 															<input type="hidden" name="idp" value="<?= $idp; ?>">
-															<button type="submit" class="btn btn-primary" name="editpegawai">Submit</button>
+															<button type="submit" class="btn btn-primary" name="edit_karyawan">Submit</button>
 														</div>
 													</form>
 
@@ -131,7 +130,7 @@
 															<input type="hidden" name="idp" value="<?= $idp; ?>">
 															<br>
 															<br>
-															<button type="submit" class="btn btn-danger" name="hapuspegawai">Submit</button>
+															<button type="submit" class="btn btn-danger" name="hapus_karyawan">Submit</button>
 														</div>
 													</form>
 												</div>
@@ -196,7 +195,7 @@
 					<label>Position</label>
 					<input type="text" name="position" placeholder="Position" class="form-control" required>
 					<br>
-					<button type="submit" class="btn btn-primary" name="tambahpegawai">Submit</button>
+					<button type="submit" class="btn btn-primary" name="tambah_karyawan">Submit</button>
 				</div>
 			</form>
 			<script>

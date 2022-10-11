@@ -99,11 +99,17 @@
                         <div class="sb-nav-link-icon"><i class="far fa-bookmark" aria-hidden="true"></i></div>
                         User
                     </a>
-                    <a class="nav-link" href="index.php?page=asset">
-                        <div class="sb-nav-link-icon"><i class="fas fa-sd-card"></i></div>
-                        Asset Data
-                    </a>
-                    <a class="nav-link" href="index.php?page=pegawai">
+                    <button class="dropdown-btn"><i class="fas fa-sd-card" aria-hidden="true"></i> <a>Asset Data </a>
+                    </button>
+                    <div class="dropdown-container">
+                        <li><a class="nav-link" href="index.php?page=asset">All</a></li>
+                        <li><a class="nav-link" href="tambahba.php">Archived</a></li>
+                        <li><a class="nav-link" href="tambahpa.php">Deployable</a></li>
+                        <li><a class="nav-link" href="tambahpa.php">Deployed</a></li>
+                        <li><a class="nav-link" href="tambahpa.php">Pending</a></li>
+                        <li><a class="nav-link" href="tambahpa.php">Un-Deployable</a></li>
+                    </div>
+                    <a class="nav-link" href="index.php?page=karyawan">
                         <div class="sb-nav-link-icon"><i class="far fa-address-card" aria-hidden="true"></i></div>
                         Employee Data
                     </a>
@@ -112,7 +118,7 @@
                         Check In/Check Out
                     </a>
 
-                    <a class="nav-link" href="index.php?page=caripegawai">
+                    <a class="nav-link" href="index.php?page=cari_karyawan">
                         <div class="sb-nav-link-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
                         Search Employee Asset Data
                     </a>
@@ -120,9 +126,9 @@
                     <button class="dropdown-btn"><i class="fas fa-cogs" aria-hidden="true"></i> <a>Pengaturan </a>
                     </button>
                     <div class="dropdown-container">
-                        <li><a href="tambahdivisi.php">Tambah Divisi </a></li>
-                        <li><a href="tambahba.php">Tambah Branch Area</a></li>
-                        <li><a href="tambahpa.php">Tambah Personal Area</a>
+                        <li><a class="nav-link" href="tambahdivisi.php">Tambah Divisi </a></li>
+                        <li><a class="nav-link" href="tambahba.php">Tambah Branch Area</a></li>
+                        <li><a class="nav-link" href="tambahpa.php">Tambah Personal Area</a>
                         <li>
                     </div>
 

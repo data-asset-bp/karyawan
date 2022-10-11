@@ -54,7 +54,7 @@
                   $pil = $_POST['pil'];
                   $no = 0;
 
-                  //mengambil data pegawai
+                  //mengambil data data asset
                   if ($pil == 1) {
                     $sql = mysqli_query($con, "SELECT * FROM data_asset where no_asset like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
                   } elseif ($pil == 2) {

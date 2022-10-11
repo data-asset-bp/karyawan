@@ -7,6 +7,7 @@
         $select = mysqli_query($con, 'SELECT * FROM data_chek_asset, data_asset, data_karyawan, user');
         $data = mysqli_fetch_array($select);
         $no = 1;
+        
         // data_asset
         $no_asset = $data['no_asset'];
         $asset_type = $data['asset_type'];

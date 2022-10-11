@@ -61,14 +61,14 @@ include("cek.php");
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Tambah Pegawai</h4>
+        <h4 class="modal-title">Tambah Karyawan</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <form method="post">
         <div class="modal-body">
-          <input type="text" name="nama" placeholder="Nama Pegawai" class="form-control" required>
+          <input type="text" name="nama" placeholder="Nama Karyawan" class="form-control" required>
           <br>
           <input type="text" name="alamat" placeholder="Alamat" class="form-control" required>
           <br>
@@ -84,7 +84,7 @@ include("cek.php");
           <input type="date" name="tgl" placeholder="Tanggal Lahir" class="form-control" required>
           <br>
 
-          <button type="submit" class="btn btn-primary" name="tambahpegawai">Submit</button>
+          <button type="submit" class="btn btn-primary" name="tambah_karyawan">Submit</button>
         </div>
       </form>
 

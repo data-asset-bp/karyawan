@@ -7,11 +7,11 @@ switch ($_GET['page']) {
     case "home":
         include 'home.php';
         break;
-    case "pegawai":
-        include 'datapegawai.php';
+    case "karyawan":
+        include 'data_karyawan.php';
         break;
-    case "caripegawai":
-        include 'caridatapegawai.php';
+    case "cari_karyawan":
+        include 'cari_data_karyawan.php';
         break;
     case "asset":
         include 'data_asset.php';
