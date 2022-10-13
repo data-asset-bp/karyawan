@@ -102,7 +102,7 @@
                     <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><a>Asset Data</a>
                     </button>
                     <div class="dropdown-container btn-sm ml-2">
-                        <li><a class="nav-link" href="index.php?page=asset"></i>All</a></li>
+                        <li><a class="nav-link" href="index.php?page=data_asset"></i>All</a></li>
                         <li><a class="nav-link" href="index.php?page=status_archived"></i>Archived</a></li>
                         <li><a class="nav-link" href="index.php?page=status_deployable"></i>Deployable</a></li>
                         <li><a class="nav-link" href="index.php?page=status_deployed"></i>Deployed</a></li>
@@ -126,9 +126,9 @@
                     <button class="dropdown-btn btn-sm ml-2"><i class="fas fa-cogs" aria-hidden="true"></i> <a>Pengaturan </a>
                     </button>
                     <div class="dropdown-container btn-sm ml-2">
-                        <li><a class="nav-link" href="tambah_divisi.php">Tambah Divisi </a></li>
-                        <li><a class="nav-link" href="tambah_ba.php">Tambah Branch Area</a></li>
-                        <li><a class="nav-link" href="tambah_pa.php">Tambah Personal Area</a>
+                        <li><a class="nav-link" href="index.php?page=tambah_divisi">Tambah Divisi </a></li>
+                        <li><a class="nav-link" href="index.php?page=tambah_ba">Tambah Branch Area</a></li>
+                        <li><a class="nav-link" href="index.php?page=tambah_pa">Tambah Personal Area</a>
                         <li>
                     </div>
 

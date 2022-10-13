@@ -9,7 +9,7 @@ switch ($_GET['page']) {
         break;
 
         // Menu Asset
-    case "asset":
+    case "data_asset":
         include 'view/asset/data_asset.php';
         break;
 
@@ -65,12 +65,12 @@ switch ($_GET['page']) {
 
         // Menu Tambah Kategori
     case "tambah_ba":
-        include 'tambah_ba.php';
+        include 'view/kategori/tambah_ba.php';
         break;
     case "tambah_divisi":
-        include 'tambah_divisi.php';
+        include 'view/kategori/tambah_divisi.php';
         break;
     case "tambah_pa":
-        include 'tambah_pa.php';
+        include 'view/kategori/tambah_pa.php';
         break;
 }
