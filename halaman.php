@@ -25,7 +25,7 @@ switch ($_GET['page']) {
 
         // Menu Admin
     case "user":
-        include 'data_user.php';
+        include 'view/admin/data_user.php';
         break;
 
         // Dashboard
