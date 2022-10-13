@@ -1,11 +1,11 @@
 <main>
     <div class="container-fluid">
-        <h1 class="mt-4">Pending Assets</h1>
+        <h1 class="mt-4">Deployed Assets</h1>
 
         <div class="card mb-4">
             <div class="card-header">
                 <!-- Button to Open the Modal -->
-                <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#tambah_asset">
                     Tambah
                 </button>
                 <a href="export_pdf_asset.php">
@@ -33,22 +33,10 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $namacari = $_POST['carinama'];
-                                    $pil = $_POST['pil'];
                                     $no = 0;
 
                                     //mengambil data data asset
-                                    if ($pil == 1) {
-                                        $sql = mysqli_query($con, "SELECT * FROM data_asset where no_asset like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
-                                    } elseif ($pil == 2) {
-                                        $sql = mysqli_query($con, "SELECT * FROM data_asset where asset_type like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
-                                    } elseif ($pil == 3) {
-                                        $sql = mysqli_query($con, "SELECT * FROM data_asset where no_serial like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
-                                    } elseif ($pil == 4) {
-                                        $sql = mysqli_query($con, "SELECT * FROM data_asset where asset_description like '%$namacari%' and NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
-                                    } else {
-                                        $sql = mysqli_query($con, "SELECT * FROM data_asset where NOT EXISTS (SELECT * FROM data_chek_asset where sts_chek=3 and data_chek_asset.no_asset = data_asset.no_asset)ORDER BY cap_date DESC");
-                                    }
+                                    $sql = mysqli_query($con, "SELECT * FROM data_asset where no_asset and EXISTS (SELECT * FROM data_chek_asset where sts_chek=4 and data_chek_asset.no_asset=data_asset.no_asset)ORDER BY cap_date DESC");
 
                                     while ($data = mysqli_fetch_array($sql)) {
                                         $no++;
@@ -103,7 +91,7 @@
                                                                     <label>STATUS</label>
                                                                     <select class="form-control" name="sts">
                                                                         <option value='1'>Pending</option>
-                                                                        <option value='2'>UnDiployable</option>
+                                                                        <option value='2'>Un-Diployable</option>
                                                                         <option value='3'>Deployed</option>
                                                                         <option value='4'>Archived</option>
                                                                         <option value='5'>Deployable</option>
@@ -253,44 +241,6 @@
                 </div>
             </div>
 </main>
-
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Tambah Data Asset</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <!-- Modal body -->
-            <form method="post">
-                <div class="modal-body">
-                    <label>No. Asset</label>
-                    <input type="text" name="no_asset" placeholder="No Asset" class="form-control" required>
-                    <br>
-                    <label>Type Asset</label>
-                    <input type="text" name="type" placeholder="Type Asset" class="form-control" required>
-                    <br>
-                    <label>No. Serial</label>
-                    <input type="text" name="no_serial" placeholder="No Serial" class="form-control" required>
-                    <br>
-                    <label>Cap Date</label>
-                    <input type="date" name="cap_date" placeholder="Cap Date" class="form-control" required>
-                    <br>
-                    <label>Description</label>
-                    <input type="text" name="description" placeholder="Description" class="form-control" required>
-                    <br>
-
-
-                    <button type="submit" class="btn btn-primary btn-sm ml-2" name="tambahasset">Simpan</button>
-                </div>
-            </form>
-
-
-
-        </div>
-    </div>
-</div>
+<?php
+include "view/asset/tambah_asset.php";
+?>

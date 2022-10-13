@@ -1,6 +1,10 @@
 <main>
   <div class="container-fluid">
     <h1 class="mt-4">Proses Checkin</h1>
+
+  </div>
+  <div class="card-header">
+    <!-- export button -->
     <a href="export_pdf_peminjaman.php">
       <button type="button" class="btn btn-success btn-sm ml-2">Export</button>
     </a>
@@ -85,7 +89,7 @@
                           <label>Status</label>
                           <select class="form-control" name="sts" required>
                             <option value='1'>Pending</option>
-                            <option value='2'>UnDiployable</option>
+                            <option value='2'>Un-Diployable</option>
                             <option value='3'>Deployed</option>
                             <option value='4'>Archived</option>
                             <option value='5'>Deployable</option>

@@ -12,7 +12,7 @@ function sts_check($kode){
     if($kode==1){
         echo "Pending";
     }elseif($kode==2){
-        echo "UnDiployable";
+        echo "Un-Diployable";
     }
 	elseif($kode==3){
         echo "Deployed";
@@ -74,5 +74,3 @@ function noassettonrp($id)
 	$data=mysqli_fetch_array($hasil);
 	return $data['Nrp'];
 }
-
-?>
