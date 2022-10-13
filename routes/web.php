@@ -5,32 +5,32 @@ switch ($_GET['page']) {
 
         // Home
     case "home":
-        include 'home.php';
+        include 'resources/views/home.php';
         break;
 
         // Menu Asset
     case "data_asset":
-        include 'view/asset/data_asset.php';
+        include 'resources/views/asset/data_asset.php';
         break;
 
         // Menu Karyawan
     case "karyawan":
-        include 'view/karyawan/data_karyawan.php';
+        include 'resources/views/karyawan/data_karyawan.php';
         break;
 
         // Menu Search
     case "cari_karyawan":
-        include 'cari_data_karyawan.php';
+        include 'resources/views/search/cari_data_karyawan.php';
         break;
 
         // Menu Admin
     case "user":
-        include 'view/admin/data_user.php';
+        include 'resources/views/admin/data_user.php';
         break;
 
         // Dashboard
     case "dashboard":
-        include 'dashboard.php';
+        include 'resources/views/dashboard.php';
         break;
 
         // Menu Check in & Check Out
@@ -48,29 +48,29 @@ switch ($_GET['page']) {
 
         // Menu Status
     case "status_archived":
-        include 'view/status/status_archived.php';
+        include 'resources/views/status/status_archived.php';
         break;
     case "status_deployable":
-        include 'view/status/status_deployable.php';
+        include 'resources/views/status/status_deployable.php';
         break;
     case "status_deployed":
-        include 'view/status/status_deployed.php';
+        include 'resources/views/status/status_deployed.php';
         break;
     case "status_pending":
-        include 'view/status/status_pending.php';
+        include 'resources/views/status/status_pending.php';
         break;
     case "status_undeployable":
-        include 'view/status/status_undeployable.php';
+        include 'resources/views/status/status_undeployable.php';
         break;
 
         // Menu Tambah Kategori
     case "tambah_ba":
-        include 'view/kategori/tambah_ba.php';
+        include 'resources/views/kategori/tambah_ba.php';
         break;
     case "tambah_divisi":
-        include 'view/kategori/tambah_divisi.php';
+        include 'resources/views/kategori/tambah_divisi.php';
         break;
     case "tambah_pa":
-        include 'view/kategori/tambah_pa.php';
+        include 'resources/views/kategori/tambah_pa.php';
         break;
 }

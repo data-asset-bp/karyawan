@@ -44,7 +44,7 @@ include("cek.php");
   ?>
   <div id="layoutSidenav_content">
     <?php
-    include('halaman.php');
+    include('routes/web.php');
     ?>
     <?php
     include "footer.php";
