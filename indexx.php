@@ -43,7 +43,7 @@
                             <li>
                                 <a class="nav-link" href="index.php?page=cari_karyawan">Pencarian</a>
                             </li>
-                            <li><a class="nav-link" href="index.php?page=asset">Data Asset</a></li>
+                            <li><a class="nav-link" href="index.php?page=data_asset">Data Asset</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -127,7 +127,7 @@
                     <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
                         <span>03</span>
                         <h4> Data Asset</h4>
-                        <a href="index.php?page=asset">
+                        <a href="index.php?page=data_asset">
                             <button class="btn btn-primary" name="data_asset">Selengkapnya</button>
                         </a>
                     </div>

@@ -1,57 +1,57 @@
 <?php
 
-function jk($kode){
-    if($kode==1){
-        echo "Laki-laki";
-    }else{
-        echo "Perempuan";
-    }
+function jk($kode)
+{
+	if ($kode == 1) {
+		echo "Laki-laki";
+	} else {
+		echo "Perempuan";
+	}
 }
 
-function sts_check($kode){
-    if($kode==1){
-        echo "Pending";
-    }elseif($kode==2){
-        echo "Un-Diployable";
-    }
-	elseif($kode==3){
-        echo "Deployed";
-    }
-	elseif($kode==4){
-        echo "Archived";
-    }
-	elseif($kode==5){
-        echo "Deployable";
-    }
+function sts_check($kode)
+{
+	if ($kode == 1) {
+		echo "Pending";
+	} elseif ($kode == 2) {
+		echo "Un-Deployed";
+	} elseif ($kode == 3) {
+		echo "Deployed";
+	} elseif ($kode == 4) {
+		echo "Archived";
+	} elseif ($kode == 5) {
+		echo "Deployable";
+	}
 }
 
 //ubah nama bulan menjadi bahasa indonesia
 function tanggal_indo($tanggal)
 {
-	$bulan = array (1 =>   'Januari',
-				'Februari',
-				'Maret',
-				'April',
-				'Mei',
-				'Juni',
-				'Juli',
-				'Agustus',
-				'September',
-				'Oktober',
-				'November',
-				'Desember'
-			);
+	$bulan = array(
+		1 =>   'Januari',
+		'Februari',
+		'Maret',
+		'April',
+		'Mei',
+		'Juni',
+		'Juli',
+		'Agustus',
+		'September',
+		'Oktober',
+		'November',
+		'Desember'
+	);
 	$split = explode('-', $tanggal);
-	return $split[2] . ' ' . $bulan[ (int)$split[1] ] . ' ' . $split[0];
+	return $split[2] . ' ' . $bulan[(int)$split[1]] . ' ' . $split[0];
 }
 
 //Merubah NRp ke nama karyawan
 function nrptonama($id)
 {
 	include("koneksi.php");
-	$sql="SELECT Nama_karyawan FROM data_karyawan WHERE Nrp='$id'";
-	$hasil=mysqli_query($con,$sql);							
-	$data=mysqli_fetch_array($hasil);
+	$sql = "SELECT Nama_karyawan FROM data_karyawan WHERE Nrp='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
 	return $data['Nama_karyawan'];
 }
 
@@ -59,9 +59,9 @@ function nrptonama($id)
 function noassettodesc($id)
 {
 	include("koneksi.php");
-	$sql="SELECT asset_description FROM data_asset WHERE no_asset='$id'";
-	$hasil=mysqli_query($con,$sql);							
-	$data=mysqli_fetch_array($hasil);
+	$sql = "SELECT asset_description FROM data_asset WHERE no_asset='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
 	return $data['asset_description'];
 }
 
@@ -69,8 +69,8 @@ function noassettodesc($id)
 function noassettonrp($id)
 {
 	include("koneksi.php");
-	$sql="SELECT Nrp FROM data_chek_asset WHERE no_asset='$id'";
-	$hasil=mysqli_query($con,$sql);							
-	$data=mysqli_fetch_array($hasil);
+	$sql = "SELECT Nrp FROM data_chek_asset WHERE no_asset='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
 	return $data['Nrp'];
 }

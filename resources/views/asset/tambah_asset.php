@@ -29,7 +29,7 @@
                     <br>
 
 
-                    <button type="submit" class="btn btn-primary btn-sm ml-2" name="tambahasset">Simpan</button>
+                    <button type="submit" class="btn btn-primary btn-sm ml-2" name="tambah_asset">Simpan</button>
                 </div>
             </form>
 

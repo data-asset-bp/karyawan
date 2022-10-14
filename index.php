@@ -40,14 +40,14 @@ include("cek.php");
 
   </nav>
   <?php
-  include('menu.php');
+  include("menu.php");
   ?>
   <div id="layoutSidenav_content">
     <?php
-    include('routes/web.php');
+    include("routes/web.php");
     ?>
     <?php
-    include "footer.php";
+    include("footer.php");
     ?>
   </div>
   </div>

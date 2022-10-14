@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-include 'koneksi.php';
+include '/koneksi.php';
 $sql = mysqli_query($con, "SELECT * FROM data_chek_asset, user ORDER BY tgl_chekout DESC");
 $no = 1;
 

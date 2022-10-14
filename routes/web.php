@@ -5,7 +5,7 @@ switch ($_GET['page']) {
 
         // Home
     case "home":
-        include 'resources/views/home.php';
+        include 'indexx.php';
         break;
 
         // Menu Asset
@@ -35,7 +35,7 @@ switch ($_GET['page']) {
 
         // Menu Check in & Check Out
     case "chekin":
-        include 'data_chekin.php';
+        include 'resources/views/checkin/data_chekin.php';
         break;
     case "chekout":
         include 'data_chekout.php';
@@ -60,7 +60,7 @@ switch ($_GET['page']) {
         include 'resources/views/status/status_pending.php';
         break;
     case "status_undeployable":
-        include 'resources/views/status/status_undeployable.php';
+        include 'resources/views/status/status_undeployed.php';
         break;
 
         // Menu Tambah Kategori

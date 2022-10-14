@@ -46,7 +46,7 @@
               <div class="icon">
                 <i class="fa fa-laptop"></i>
               </div>
-              <a href="index.php?page=asset" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="index.php?page=data_asset" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

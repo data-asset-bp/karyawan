@@ -3,7 +3,7 @@
 <body style="padding: 0 20; width:100%">
     <div>
         <?php
-        include "koneksi.php";
+        include "/koneksi.php";
         $select = mysqli_query($con, 'SELECT * FROM data_chek_asset, data_asset, data_karyawan, user');
         $data = mysqli_fetch_array($select);
         $no = 1;

@@ -110,7 +110,7 @@ if (isset($_POST['hapususer'])) {
 }
 
 //menambah Asset
-if (isset($_POST['tambahasset'])) {
+if (isset($_POST['tambah_asset'])) {
 	$no_asset = $_POST['no_asset'];
 	$type = $_POST['type'];
 	$no_serial = $_POST['no_serial'];
@@ -122,7 +122,7 @@ if (isset($_POST['tambahasset'])) {
 
 	if ($addtotable) {
 
-		header('location:index.php?page=asset');
+		header('location:index.php?page=data_asset');
 	} else {
 		echo 'Gagal';
 		header('location:index.php');
@@ -131,7 +131,7 @@ if (isset($_POST['tambahasset'])) {
 
 
 //update data asset
-if (isset($_POST['editasset'])) {
+if (isset($_POST['edit_asset'])) {
 	$idp = $_POST['idp'];
 	$no_asset = $_POST['no_asset'];
 	$type = $_POST['type'];
@@ -140,9 +140,9 @@ if (isset($_POST['editasset'])) {
 	$description = $_POST['description'];
 
 
-	$query = mysqli_query($con, "update data_asset set  no_asset='$no_asset', asset_type='$type', no_serial='$no_serial', cap_date='$date', asset_description='$description' where no_asset='$idp'");
+	$query = mysqli_query($con, "update data_asset set no_asset='$no_asset', asset_type='$type', no_serial='$no_serial', cap_date='$date', asset_description='$description' where no_asset='$no_asset'");
 	if ($query) {
-		header('location:index.php?page=asset');
+		header('location:index.php?page=data_asset');
 	} else {
 		echo 'Gagal';
 		header('location:index.php');
@@ -150,12 +150,12 @@ if (isset($_POST['editasset'])) {
 }
 
 //menghapus data Asset
-if (isset($_POST['hapusasset'])) {
+if (isset($_POST['hapus_asset'])) {
 	$idp = $_POST['idp'];
 
-	$hapus = mysqli_query($con, "delete from  data_asset where no_asset='$idp'");
+	$hapus = mysqli_query($con, "delete from  data_asset where no_asset='$no_asset'");
 	if ($hapus) {
-		header('location:index.php?page=asset');
+		header('location:index.php?page=data_asset');
 	} else {
 		echo 'Gagal';
 		header('location:index.php');
@@ -178,10 +178,10 @@ if (isset($_POST['checkout'])) {
 	}
 	if ($addtotable) {
 
-		header('location:index.php?page=asset');
+		header('location:index.php?page=data_asset');
 	} else {
 		echo 'Gagal';
-		header('location:index.php?page=asset');
+		header('location:index.php?page=data_asset');
 	}
 }
 
@@ -194,7 +194,7 @@ if (isset($_POST['checkin'])) {
 	$no_asset = $_POST['no_asset'];
 
 
-	$query = mysqli_query($con, "update data_asset set  sts_asset='$sts' where no_asset='$no_asset'");
+	$query = mysqli_query($con, "update data_asset set sts_asset='$sts' where no_asset='$no_asset'");
 	$query1 = mysqli_query($con, "update data_chek_asset set  sts_chek='$sts', tgl_chekin='$tgl', note_checkin='$note' where id_chek='$id'");
 
 	if ($addtotable) {

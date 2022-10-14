@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-include 'koneksi.php';
+include '/koneksi.php';
 $data = mysqli_query($con, "SELECT * FROM data_asset ORDER BY cap_date DESC");
 
 $mpdf = new \Mpdf\Mpdf();
