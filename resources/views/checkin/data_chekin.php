@@ -1,3 +1,4 @@
+<?php include "form_peminjamann.php"; ?>
 <main>
   <div class="container-fluid">
     <h1 class="mt-4">Proses Checkin</h1>
@@ -60,8 +61,8 @@
                     Chek In
                   </button>
                 </a>
-                <a href="export.php" data-toggle="row" data-target="#print<?= $data; ?>">
-                  <button type="button" class="btn btn-success btn-sm ml-2">
+                <a>
+                  <button type="button" class="btn btn-success btn-sm ml-2" data-toggle="modal" data-target="#print<?= $id; ?>">
                     Print
                   </button>
                 </a>
@@ -89,7 +90,7 @@
                           <label>Status</label>
                           <select class="form-control" name="sts" required>
                             <option value='1'>Pending</option>
-                            <option value='2'>Un-Diployable</option>
+                            <option value='2'>Un-Deployed</option>
                             <option value='3'>Deployed</option>
                             <option value='4'>Archived</option>
                             <option value='5'>Deployable</option>
@@ -102,7 +103,7 @@
                           <input type="text" name="note" placeholder="Note" class="form-control" required>
                           <br>
                           <input type="hidden" name="id" value="<?= $id; ?>">
-                          <button type="submit" class="btn btn-primary" name="checkin">Checkin</button>
+                          <button type="submit" class="btn btn-primary btn-sm ml-2" name="checkin">Checkin</button>
                         </div>
                       </form>
 
@@ -111,6 +112,7 @@
                     </div>
                   </div>
                 </div>
+
               </td>
 
             </tr>
@@ -125,3 +127,6 @@
   </div>
   </div>
 </main>
+<?php
+include "export_pdf_asset.php";
+?>

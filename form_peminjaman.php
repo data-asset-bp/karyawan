@@ -4,13 +4,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 include 'koneksi.php';
 include 'func.php';
-$sql = mysqli_query($con, "SELECT * FROM data_chek_asset where id_chek ORDER BY tgl_chekout DESC");
+$sql = mysqli_query($con, "SELECT * FROM data_peminjaman where id_peminjaman");
 $no = 1;
 
 while ($data = mysqli_fetch_array($sql)) {
-    $id_chek = $data['id_chek'];
-    $nrp = $data['Nrp'];
-    $no_asset = $data['no_asset'];
+    $nrp = $data['nrp'];
+    $nama_karyawan = $data['nama_karyawan'];
+    $divisi = $data['divisi'];
 }
 
 $mpdf = new \Mpdf\Mpdf();

@@ -74,3 +74,51 @@ function noassettonrp($id)
 	$data = mysqli_fetch_array($hasil);
 	return $data['Nrp'];
 }
+
+//Merubah no_asset to serial number
+function no_asset_to_no_serial($id)
+{
+	include("koneksi.php");
+	$sql = "SELECT no_serial FROM data_asset WHERE no_asset='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
+	return $data['no_serial'];
+}
+
+//Merubah no_asset to serial number
+function no_asset_to_asset_type($id)
+{
+	include("koneksi.php");
+	$sql = "SELECT asset_type FROM data_asset WHERE no_asset='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
+	return $data['asset_type'];
+}
+
+//Merubah no_asset to nama admin
+function no_asset_to_nama_admin($id)
+{
+	include("koneksi.php");
+	$sql = "SELECT nama FROM user WHERE id_user='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
+	return $data['nama'];
+}
+
+function no_asset_to_status_chek($id)
+{
+	include("koneksi.php");
+	$sql = "SELECT sts_chek FROM data_chek_asset WHERE no_asset='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
+	return $data['sts_chek'];
+}
+
+function status_chek_to_status_asset($id)
+{
+	include("koneksi.php");
+	$sql = "SELECT sts_chek FROM data_chek_asset WHERE no_asset='$id'";
+	$hasil = mysqli_query($con, $sql);
+	$data = mysqli_fetch_array($hasil);
+	return $data['sts_chek'];
+}

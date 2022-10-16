@@ -85,7 +85,8 @@
                       <td><?= $no_serial; ?></td>
                       <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                       <td><?= $description; ?></td>
-                      <td><?= sts_check($sts); ?></td>
+                      <td><?= sts_check($sts) ?></td>
+                      <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
                       <td>
                         <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>">
                           CHECKOUT
@@ -177,7 +178,7 @@
                                       <input type="text" name="note" class="form-control" required>
                                       <br>
                                       <input type="hidden" name="idp" value="<?= $no_asset; ?>">
-                                      <button type="submit" class="btn btn-primary" name="checkout">Checkout</button>
+                                      <button type="submit" class="btn btn-primary btn-sm ml-2" name="checkout">Checkout</button>
                                     </div>
                               </form>
 

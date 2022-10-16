@@ -57,6 +57,7 @@
                                             <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                                             <td><?= $description; ?></td>
                                             <td><?= sts_check($sts); ?></td>
+                                            <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
                                             <td>
                                                 <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>">
                                                     CHECKOUT
@@ -91,7 +92,7 @@
                                                                     <label>STATUS</label>
                                                                     <select class="form-control" name="sts">
                                                                         <option value='1'>Pending</option>
-                                                                        <option value='2'>Un-Diployable</option>
+                                                                        <option value='2'>Un-Deployed</option>
                                                                         <option value='3'>Deployed</option>
                                                                         <option value='4'>Archived</option>
                                                                         <option value='5'>Deployable</option>

@@ -73,4 +73,9 @@ switch ($_GET['page']) {
     case "tambah_pa":
         include 'resources/views/kategori/tambah_pa.php';
         break;
+
+        // Halaman Verify
+    case "verify":
+        include 'resources/views/auth/verify.php';
+        break;
 }
