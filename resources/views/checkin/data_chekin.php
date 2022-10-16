@@ -61,7 +61,7 @@
                     Chek In
                   </button>
                 </a>
-                <a>
+                <a href="export.php">
                   <button type="button" class="btn btn-success btn-sm ml-2" data-toggle="modal" data-target="#print<?= $id; ?>">
                     Print
                   </button>

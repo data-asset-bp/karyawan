@@ -99,15 +99,15 @@
                         <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
                         Admin
                     </a>
-                    <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><a>Assets</a>
+                    <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><span>Assets</span>
                     </button>
-                    <div class="dropdown-container btn-sm ml-2">
-                        <li><a class="nav-link" href="index.php?page=data_asset"></i>All</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_archived"></i>Archived</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_deployable"></i>Deployable</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_deployed"></i>Deployed</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_pending"></i>Pending</a></li>
-                        <li><a class="nav-link" href="index.php?page=status_undeployable"></i>Un-Deployed</a></li>
+                    <div class="collapse">
+                        <li><a class="nav-link collapse-item" href="index.php?page=data_asset"></i>All</a></li>
+                        <li><a class="nav-link collapse-item" href="index.php?page=status_archived"></i>Archived</a></li>
+                        <li><a class="nav-link collapse-item" href="index.php?page=status_deployable"></i>Deployable</a></li>
+                        <li><a class="nav-link collapse-item" href="index.php?page=status_deployed"></i>Deployed</a></li>
+                        <li><a class="nav-link collapse-item" href="index.php?page=status_pending"></i>Pending</a></li>
+                        <li><a class="nav-link collapse-item" href="index.php?page=status_undeployable"></i>Un-Deployed</a></li>
                     </div>
                     <a class="nav-link" href="index.php?page=karyawan">
                         <div class="sb-nav-link-icon"><i class="far fa-address-card" aria-hidden="true"></i></div>
