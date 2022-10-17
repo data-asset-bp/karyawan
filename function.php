@@ -205,3 +205,31 @@ if (isset($_POST['checkin'])) {
 		header('location:index.php?page=chekin	');
 	}
 }
+
+//menambah proses Checkin
+if (isset($_POST['print'])) {
+	$id_peminjaman = $_POST['id_peminjaman'];
+	$nama_admin = $_POST[''];
+	$nama_peminjam = $_POST['nama_karyawan'];
+	$asset_number = $_POST['nama_karyawan'];
+	$asset_type = $_POST['nama_karyawan'];
+	$serial_number = $_POST['nama_karyawan'];
+	$asset_description = $_POST['nama_karyawan'];
+	$date = $_POST['nama_karyawan'];
+	$tgl = $_POST['tgl'];
+	$sts = $_POST['sts'];
+	$note = $_POST['note'];
+	$no_asset = $_POST['no_asset'];
+
+
+	$query = mysqli_query($con, "update data_asset set sts_asset='$sts' where no_asset='$no_asset'");
+	$query1 = mysqli_query($con, "update data_chek_asset set  sts_chek='$sts', tgl_chekin='$tgl', note_checkin='$note' where id_chek='$id'");
+
+	if ($addtotable) {
+
+		header('location:index.php?page=chekin');
+	} else {
+		echo 'Gagal';
+		header('location:index.php?page=chekin	');
+	}
+}

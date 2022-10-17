@@ -37,6 +37,7 @@
 
                                     //mengambil data data asset
                                     $sql = mysqli_query($con, "SELECT * FROM data_asset where sts_asset=1 and EXISTS (SELECT * FROM data_chek_asset where sts_chek=1 and data_chek_asset.sts_chek=data_asset.sts_asset)ORDER BY cap_date DESC");
+                                    // $sql = mysqli_query($con, "SELECT * FROM data_asset where sts_asset=1 ORDER BY cap_date DESC");
 
                                     while ($data = mysqli_fetch_array($sql)) {
                                         $no++;

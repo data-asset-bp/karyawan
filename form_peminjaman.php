@@ -8,9 +8,13 @@ $sql = mysqli_query($con, "SELECT * FROM data_peminjaman where id_peminjaman");
 $no = 1;
 
 while ($data = mysqli_fetch_array($sql)) {
+    $id_peminjaman = $data['id_peminjaman'];
     $nrp = $data['nrp'];
     $nama_karyawan = $data['nama_karyawan'];
-    $divisi = $data['divisi'];
+    $no_asset = $data['no_asset'];
+    $asset_type = $data['asset_type'];
+    $no_serial = $data['no_serial'];
+    $asset_description = $data['asset_description'];
 }
 
 $mpdf = new \Mpdf\Mpdf();
