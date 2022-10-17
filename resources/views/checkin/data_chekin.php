@@ -60,11 +60,12 @@
                     Chek In
                   </button>
                 </a>
-                <a>
+                <a href="form_peminjaman.php">
                   <button type="button" class="btn btn-success btn-sm ml-2" data-toggle="modal" data-target="#print<?= $id; ?>">
                     Print
                   </button>
                 </a>
+
                 <!-- The Modal -->
                 <div class="modal fade" id="checkin<?= $id; ?>">
                   <div class="modal-dialog">
@@ -125,7 +126,3 @@
   </div>
   </div>
 </main>
-<?php
-include "export_pdf_asset.php";
-include 'function.php';
-?>
