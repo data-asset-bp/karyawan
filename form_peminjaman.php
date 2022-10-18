@@ -53,7 +53,6 @@ $html = '
                 <th style="text-align:center;">Asset Type</th>
                 <th style="text-align:center;">Serial Number</th>
                 <th style="text-align:center;">Asset Description</th>
-                <th style="text-align:center;">Date</th>
             </tr>
             ';
 foreach ($sql as $data) {
@@ -64,7 +63,6 @@ foreach ($sql as $data) {
                 <td style="text-align:center;">' . noassettodesc($no_asset) . '</td>
                 <td style="text-align:center;">' . no_asset_to_no_serial($no_asset) . '</td>
                 <td style="text-align:center;">' . no_asset_to_asset_type($no_asset) . '</td>
-                <td style="text-align:center;">' . date('d M Y', strtotime($data['tgl_chekout'])) . '</td>
             </tr>
             ';
 }
@@ -76,7 +74,7 @@ $html .= '
         Jakarta, ' . date('d M Y') . '
         <br><br><br><br><br><br>
         <address>
-            <strong>' . nrptonama($nrp)  . '</strong>
+            <strong>' . $nrp . '</strong>
         </address>
     </div>';
 

@@ -233,3 +233,16 @@ if (isset($_POST['print'])) {
 		header('location:index.php?page=chekin	');
 	}
 }
+
+//form peminjaman data asset
+if (isset($_POST['print'])) {
+	$idp = $_POST['idp'];
+	$nrp = $_POST['nrp'];
+	$nama_karyawan = $_POST['nama_karyawan'];
+	$no_asset = $_POST['no_asset'];
+	$asset_type = $_POST['asset_type'];
+	$no_serial = $_POST['no_serial'];
+	$asset_description = $_POST['asset_description'];
+
+	$addtotable = mysqli_query($con, "insert into data_peminjaman (nrp, nama_karyawan, no_asset, asset_type, no_serial, asset_description) values('$nrp', '$nama_karyawan','$no_asset','$asset_type','$no_serial','$asset_description')");
+}

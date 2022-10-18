@@ -4,7 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 include 'koneksi.php';
 include 'func.php';
-$sql = mysqli_query($con, "SELECT * FROM data_chek_asset where id_chek ORDER BY tgl_chekout DESC");
+$sql = mysqli_query($con, "SELECT * FROM data_chek_asset where no_asset ORDER BY tgl_chekout DESC");
 $no = 1;
 
 while ($data = mysqli_fetch_array($sql)) {
@@ -23,13 +23,12 @@ $html = '
     <div class="col-sm-4 invoice-col">
         <h3 style="text-align:center">Peminjaman Asset</h3>
     </div>
-    <div class="row invoice-info">
+    <div class="column invoice-info">
         <div class="col-sm-4 invoice-col">
             From:
             <address>
                 <strong>' . $no_asset . '</strong>
             </address>
-            <br>
         </div>
         <div class="col-sm-4 invoice-col">
             To:
@@ -49,7 +48,6 @@ $html = '
                 <th style="text-align:center;">Asset Type</th>
                 <th style="text-align:center;">Serial Number</th>
                 <th style="text-align:center;">Asset Description</th>
-                <th style="text-align:center;">Date</th>
             </tr>
             ';
 foreach ($sql as $data) {
@@ -60,7 +58,6 @@ foreach ($sql as $data) {
                 <td style="text-align:center;">' . noassettodesc($no_asset) . '</td>
                 <td style="text-align:center;">' . no_asset_to_no_serial($no_asset) . '</td>
                 <td style="text-align:center;">' . no_asset_to_asset_type($no_asset) . '</td>
-                <td style="text-align:center;">' . date('d M Y', strtotime($data['tgl_chekout'])) . '</td>
             </tr>
             ';
 }
@@ -72,7 +69,7 @@ $html .= '
         Jakarta, ' . date('d M Y') . '
         <br><br><br><br><br><br>
         <address>
-            <strong>' . nrptonama($nrp)  . '</strong>
+            <strong>' . $nrp  . '</strong>
         </address>
     </div>';
 

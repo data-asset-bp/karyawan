@@ -35,7 +35,7 @@
           while ($data = mysqli_fetch_array($sql)) {
             $no++;
             $id = $data['id_chek'];
-            $Nrp = $data['Nrp'];
+            $nrp = $data['Nrp'];
             $no_asset = $data['no_asset'];
             $tgl_checkout = $data['tgl_chekout'];
             $tgl_checkin = $data['tgl_chekin'];
@@ -46,7 +46,7 @@
           ?>
             <tr>
               <td><?= $no; ?></td>
-              <td><?= nrptonama($Nrp); ?></td>
+              <td><?= nrptonama($nrp); ?></td>
               <td><?= $no_asset; ?></td>
               <td><?= noassettodesc($no_asset); ?></td>
               <td><?= date('d M Y', strtotime($data['tgl_chekout'])) ?></td>
@@ -60,11 +60,16 @@
                     Chek In
                   </button>
                 </a>
-                <a href="form_peminjaman.php">
-                  <button type="button" class="btn btn-success btn-sm ml-2" data-toggle="modal" data-target="#print<?= $id; ?>">
+                <a href="export_pdf_peminjaman.php">
+                  <button type="button" class="btn btn-success btn-sm ml-2" data-target="#print<?= $id; ?>">
                     Print
                   </button>
                 </a>
+                <!-- <a>
+                  <button type="button" class="btn btn-success btn-sm ml-2" data-toggle="modal" data-target="#print<?= $id; ?>">
+                    Print
+                  </button>
+                </a> -->
 
                 <!-- The Modal -->
                 <div class="modal fade" id="checkin<?= $id; ?>">
@@ -107,6 +112,46 @@
                       </form>
 
 
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal fade" id="print<?= $id; ?>">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Print</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <form method="post">
+                        <div class="modal-body">
+                          <label>Nama Karyawan</label>
+                          <input type="text" name="nama_karyawan" value="<?= nrptonama($nrp) ?>" class="form-control" disabled>
+                          <br>
+                          <label>No. Asset</label>
+                          <input type="text" name="no_asset" value="<?= $no_asset; ?>" class="form-control" disabled>
+                          <br>
+                          <label>Type Asset</label>
+                          <input type="text" name="asset_type" value="<?= no_asset_to_asset_type($no_asset) ?>" class="form-control" disabled>
+                          <br>
+                          <label>No. Serial</label>
+                          <input type="text" name="no_serial" value="<?= no_asset_to_no_serial($no_asset) ?>" class="form-control" disabled>
+                          <br>
+                          <label>Description</label>
+                          <input type="text" name="asset_description" value="<?= noassettodesc($no_asset) ?>" class="form-control" disabled>
+                          <br>
+
+                          <input type="hidden" name="idp" value="<?= $no_asset; ?>">
+                          <button type="submit" class="btn btn-success" name="print"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+                              <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
+                            </svg> Print</button>
+                        </div>
+                      </form>
 
                     </div>
                   </div>

@@ -47,6 +47,7 @@
                     <label><?= $nama_karyawan; ?></label>
                 </address>
             </div>
+            <br>
             <div class="col-sm-4 invoice-col">
                 <p style="text-align:justify ;">
                     Decision Tree Classifier merupakan metode pembelajaran yang digunakan untuk klasifikasi, metode ini bertujuan untuk membuat model yang memprediksi nilai variabel target dengan mempelajari aturan keputusan sederhana yang disimpulkan dari data. <br>
@@ -63,7 +64,7 @@
                     <th>Asset Type</th>
                     <th>Serial Number</th>
                     <th>Asset Description</th>
-                    <th style="text-align:center;">Date</th>
+                    <!-- <th style="text-align:center;">Date</th> -->
                 </tr>
                 <tr>
                     <td style="text-align:center;"><?= $no++ ?></td>
@@ -71,7 +72,7 @@
                     <td><?= $asset_type; ?></td>
                     <td><?= $no_serial; ?></td>
                     <td><?= $description; ?></td>
-                    <td style="text-align:center;"><?= date('d M Y', strtotime($cap_date)) ?></td>
+                    <!-- <td style="text-align:center;"><?= date('d M Y', strtotime($cap_date)) ?></td> -->
                 </tr>
             </table>
             <br>
