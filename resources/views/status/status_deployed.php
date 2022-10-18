@@ -8,9 +8,9 @@
                 <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#tambah_asset">
                     Tambah
                 </button>
-                <a href="export_pdf_asset.php">
+                <!-- <a href="export_pdf_asset.php">
                     <button type="button" class="btn btn-success btn-sm ml-2">Export</button>
-                </a>
+                </a> -->
 
                 <br><br>
                 <div class="card mb-4">

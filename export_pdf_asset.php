@@ -32,7 +32,7 @@ foreach ($data as $d) {
         <td>' . $d['asset_type'] . '</td>
         <td>' . $d['no_serial'] . '</td>
         <td>' . $d['asset_description'] . '</td>
-        <td>' . date('d M Y', strtotime($d['cap_date'])) . '</td>
+        <td style="text-align:center">' . date('d M Y', strtotime($d['cap_date'])) . '</td>
         </tr>';
 }
 
