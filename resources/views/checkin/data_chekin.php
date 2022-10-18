@@ -32,6 +32,7 @@
 
           $no = 0;
           $sql = mysqli_query($con, "SELECT * FROM data_chek_asset order by tgl_chekout ASC");
+
           while ($data = mysqli_fetch_array($sql)) {
             $no++;
             $id = $data['id_chek'];
@@ -60,7 +61,7 @@
                     Chek In
                   </button>
                 </a>
-                <a href="export_pdf_peminjaman.php">
+                <a href="/resources/views/export/export_pdf_peminjaman.php?id=<?= $id ?>">
                   <button type="button" class="btn btn-success btn-sm ml-2" data-target="#print<?= $id; ?>">
                     Print
                   </button>
