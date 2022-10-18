@@ -41,11 +41,6 @@ switch ($_GET['page']) {
         include 'data_chekout.php';
         break;
 
-        // Export
-    case "export":
-        include 'export.php';
-        break;
-
         // Menu Status
     case "status_archived":
         include 'resources/views/status/status_archived.php';

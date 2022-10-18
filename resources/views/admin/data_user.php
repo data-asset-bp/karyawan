@@ -69,16 +69,17 @@
                           <!-- Modal body -->
                           <form method="post">
                             <div class="modal-body">
+                              <label>Name</label>
                               <input type="text" name="nama" readonly value="<?= $nama; ?>" class="form-control" required>
                               <br>
+                              <label>Username</label>
                               <input type="text" name="username" value="<?= $username; ?>" class="form-control" required>
                               <br>
+                              <label>Password</label>
                               <input type="text" name="password" value="<?= $password; ?>" class="form-control" required>
                               <br>
-
-
                               <input type="hidden" name="idp" value="<?= $id; ?>">
-                              <button type="submit" class="btn btn-primary" name="edituser">Save</button>
+                              <button type="submit" class="btn btn-primary btn-sm ml-2" name="edituser">Save</button>
                             </div>
                           </form>
 
@@ -104,7 +105,7 @@
                               <input type="hidden" name="idp" value="<?= $id; ?>">
                               <br>
                               <br>
-                              <button type="submit" class="btn btn-danger" name="hapususer">Yes, Delete</button>
+                              <button type="submit" class="btn btn-danger btn-sm ml-2" name="hapususer">Yes, Delete</button>
                             </div>
                           </form>
                         </div>
@@ -123,33 +124,6 @@
     </div>
   </div>
 </main>
-
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Add Data User</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <form method="post">
-        <div class="modal-body">
-          <input type="text" name="nama" placeholder="Nama" class="form-control" required>
-          <br>
-          <input type="text" name="username" placeholder="Username" class="form-control" required>
-          <br>
-          <input type="password" name="password" placeholder="Password" class="form-control" required>
-
-          <button type="submit" class="btn btn-primary" name="tambahuser">Save</button>
-        </div>
-      </form>
-
-
-
-    </div>
-  </div>
-</div>
+<?php
+include "tambah_user.php";
+?>
