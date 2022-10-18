@@ -50,7 +50,7 @@
 
 							?>
 								<tr>
-									<td><?= $no; ?></td>
+									<td style="text-align:center"><?= $no; ?></td>
 									<td><?= $nrp; ?></td>
 									<td><?= $nama; ?></td>
 									<td><?= $ho; ?></td>

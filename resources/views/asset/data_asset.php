@@ -79,7 +79,7 @@
 
                   ?>
                     <tr>
-                      <td><?= $no; ?></td>
+                      <td style="text-align:center"><?= $no; ?></td>
                       <td><?= $no_asset; ?></td>
                       <td><?= $type; ?></td>
                       <td><?= $no_serial; ?></td>

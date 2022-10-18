@@ -23,7 +23,7 @@
             <td>NOTE CHECKOUT</td>
             <td>NOTE CHECKIN</td>
             <td>STATUS</td>
-            <td>AKSI</td>
+            <td>Action</td>
 
           </tr>
         </thead>
@@ -46,7 +46,7 @@
 
           ?>
             <tr>
-              <td><?= $no; ?></td>
+              <td style="text-align:center"><?= $no; ?></td>
               <td><?= nrptonama($nrp); ?></td>
               <td><?= $no_asset; ?></td>
               <td><?= noassettodesc($no_asset); ?></td>
