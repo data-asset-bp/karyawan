@@ -5,10 +5,10 @@
     <div class="card mb-4">
       <div class="card-header">
         <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_asset"><i class="fa fa-plus"></i>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_asset"><i class="fa fa-plus" style="font-size : 15px;"></i>
         </button>
         <a href="export_pdf_asset.php">
-          <button type="button" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
+          <button type="button" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16" style="font-size : 15px;">
               <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
             </svg></button>
         </a>
@@ -85,10 +85,15 @@
                       <td><?= $no_serial; ?></td>
                       <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                       <td><?= $description; ?></td>
-                      <td><?= sts_check($sts) ?></td>
+                      <!-- <td><?= sts_check($sts) ?></td> -->
+
+                      <td class="align-middle action" style="text-align:center">
+                        <span class="dcd-badge dcd-badge-success"><?= sts_check($sts) ?></span>
+                      </td>
+
                       <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
                       <td>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
+                        <button type="button" class="dcd-badge " data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
                           Check Out
                         </button>
 
@@ -188,9 +193,9 @@
                       </td>
 
                       <td>
-                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
+                        <button type="button" class="dcd-badge dcd-badge-warning js-in-queue" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
                         </button>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
+                        <button type="button" class="dcd-badge dcd-badge-danger js-in-queue" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
                         </button>
 
                         <!-- edit The Modal -->
