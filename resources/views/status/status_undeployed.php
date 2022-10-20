@@ -58,7 +58,7 @@
                                             <td><?= sts_check($sts); ?></td>
                                             <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
                                             <td>
-                                                <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
+                                                <button type="button" class="dcd-badge dcd-badge-" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
                                                     Check Out
                                                 </button>
 
@@ -158,9 +158,9 @@
                                             </td>
 
                                             <td>
-                                                <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
+                                                <button type="button" class="dcd-badge dcd-badge-warning" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
+                                                <button type="button" class="dcd-badge dcd-badge-danger" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
                                                 </button>
 
                                                 <!-- edit The Modal -->

@@ -13,7 +13,7 @@
           <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
-                <td>No</td>
+                <td style="text-align:center">No</td>
                 <td>Name</td>
                 <td>Username</td>
                 <td>Password</td>
@@ -39,16 +39,16 @@
 
               ?>
                 <tr>
-                  <td><?= $no; ?></td>
+                  <td style="text-align:center"><?= $no; ?></td>
                   <td><?= $nama; ?></td>
                   <td><?= $username; ?></td>
                   <td><?= $password; ?></td>
 
 
                   <td>
-                    <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $id; ?>"><i class="fa fa-edit"></i>
+                    <button type="button" class="dcd-badge dcd-badge-warning" data-toggle="modal" data-target="#edit<?= $id; ?>"><i class="fa fa-edit"></i>
                     </button>
-                    <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $id; ?>"><i class="fa fa-trash"></i>
+                    <button type="button" class="dcd-badge dcd-badge-danger" data-toggle="modal" data-target="#delete<?= $id; ?>"><i class="fa fa-trash"></i>
                     </button>
 
                     <!-- edit The Modal -->

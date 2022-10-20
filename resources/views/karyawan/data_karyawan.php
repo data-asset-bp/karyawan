@@ -13,7 +13,7 @@
 					<table align="center" width="90%" cellspacing="0" class="table table-bordered table-striped table-hover">
 						<thead>
 							<tr>
-								<td>NO</td>
+								<td style="text-align:center">NO</td>
 								<td>NRP</td>
 								<td>NAMA KARYAWAN</td>
 								<td>OFFICE</td>
@@ -60,9 +60,9 @@
 									<td><?= $position; ?></td>
 
 									<td>
-										<button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $idp; ?>"><i class="fa fa-edit"></i>
+										<button type="button" class="dcd-badge dcd-badge-warning" data-toggle="modal" data-target="#edit<?= $idp; ?>"><i class="fa fa-edit"></i>
 										</button>
-										<button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $idp; ?>"><i class="fa fa-trash"></i>
+										<button type="button" class="dcd-badge dcd-badge-danger" data-toggle="modal" data-target="#delete<?= $idp; ?>"><i class="fa fa-trash"></i>
 										</button>
 
 										<!-- edit The Modal -->

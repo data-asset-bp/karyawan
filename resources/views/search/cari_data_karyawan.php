@@ -34,7 +34,7 @@
 					<table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover">
 						<thead>
 							<tr>
-								<td>NO</td>
+								<td style="text-align:center">NO</td>
 								<td>NRP</td>
 								<td>Employee Name</td>
 								<td>Divison</td>
@@ -141,7 +141,7 @@
 								$asset_description = $data_as['asset_description'];
 							?>
 								<tr>
-									<td><?= $no; ?></td>
+									<td style="text-align:center"><?= $no; ?></td>
 									<td><?= $nrp; ?></td>
 									<td><?= $nama; ?></td>
 									<td><?= $div; ?></td>
