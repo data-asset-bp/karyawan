@@ -14,7 +14,7 @@ $html = '<html><head>
     <div>
         <h3 style="text-align:center">Data Asset</h3>
     </div>
-    <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover" border="1">
+    <table align="center" width="100%" cellspacing="0" class="table table-bordered" border="1">
         <tr>
             <th>No</th> 
             <th>Asset Number</th>

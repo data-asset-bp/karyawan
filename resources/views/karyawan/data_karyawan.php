@@ -5,8 +5,7 @@
 		<div class="card mb-4">
 			<div class="card-header">
 				<!-- Button to Open the Modal -->
-				<button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#tambah_karyawan">
-					ADD
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_asset"><i class="fa fa-plus"></i>
 				</button>
 			</div>
 			<div class="card-body">
@@ -22,7 +21,7 @@
 								<td>BRANCH AREA</td>
 								<td>PERSONAL AREA</td>
 								<td>POSITION</td>
-								<td>AKSI</td>
+								<td>ACTION</td>
 
 							</tr>
 						</thead>
@@ -61,11 +60,9 @@
 									<td><?= $position; ?></td>
 
 									<td>
-										<button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $idp; ?>">
-											Edit
+										<button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $idp; ?>"><i class="fa fa-edit"></i>
 										</button>
-										<button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $idp; ?>">
-											Delete
+										<button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $idp; ?>"><i class="fa fa-trash"></i>
 										</button>
 
 										<!-- edit The Modal -->

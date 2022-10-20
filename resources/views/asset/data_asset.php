@@ -5,8 +5,7 @@
     <div class="card mb-4">
       <div class="card-header">
         <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#tambah_asset">
-          Tambah
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_asset"><i class="fa fa-plus"></i>
         </button>
         <a href="export_pdf_asset.php">
           <button type="button" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer" viewBox="0 0 16 16">
@@ -90,8 +89,8 @@
                       <td><?= sts_check($sts) ?></td>
                       <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
                       <td>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>">
-                          CHECKOUT
+                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
+                          Check Out
                         </button>
 
                         <!-- Checkout The Modal -->
@@ -190,11 +189,9 @@
                       </td>
 
                       <td>
-                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $no_asset; ?>">
-                          Edit
+                        <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
                         </button>
-                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $no_asset; ?>">
-                          Delete
+                        <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
                         </button>
 
                         <!-- edit The Modal -->

@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-include '/koneksi.php';
+include 'koneksi.php';
 $data = mysqli_query($con, "SELECT * FROM data_asset ORDER BY cap_date DESC");
 
 $mpdf = new \Mpdf\Mpdf();
@@ -14,7 +14,7 @@ $html = '<html><head>
     <div>
         <h3 style="text-align:center">Data Asset</h3>
     </div>
-    <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover" border="1">
+    <table align="center" width="100%" cellspacing="0" class="table table-bordered" border="1">
         <tr>
             <th>No</th> 
             <th>Asset Number</th>
@@ -32,7 +32,7 @@ foreach ($data as $d) {
         <td>' . $d['asset_type'] . '</td>
         <td>' . $d['no_serial'] . '</td>
         <td>' . $d['asset_description'] . '</td>
-        <td>' . date('d M Y', strtotime($d['cap_date'])) . '</td>
+        <td style="text-align:center">' . date('d M Y', strtotime($d['cap_date'])) . '</td>
         </tr>';
 }
 

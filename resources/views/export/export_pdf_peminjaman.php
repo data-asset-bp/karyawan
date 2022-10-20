@@ -15,7 +15,7 @@ include 'func.php';
 
 $check = $conn->query("SELECT * FROM data_chek_asset WHERE id_chek='" . $_GET['id'] . "'")->fetch_object();
 $karyawan = $conn->query("SELECT * FROM data_karyawan WHERE Nrp='" . $check->Nrp . "'")->fetch_object();
-$asset = $conn->query("SELECT * FROM data_asset WHERE sts_asset='" . $check->sts_chek . "'");
+$asset = $conn->query("SELECT * FROM data_asset WHERE no_asset='" . $check->no_asset . "'");
 $admin = $conn->query("SELECT * FROM user WHERE nama=nama")->fetch_object();
 
 $data = '';
@@ -65,6 +65,7 @@ $html =
             Sebuah decision tree adalah sebuah struktur yang dapat digunakan untuk membagi kumpulan data yang besar menjadi himpunan-himpunan record yang lebih kecil dengan menerapkan serangkaian aturan keputusan. <br>
             Pada decision tree setiap simpul daun menandai label kelas. Simpul yang bukan simpul akhir terdiri dari akar dan simpul internal yang terdiri dari kondisi tes atribut pada sebagian record yang mempunyai karakteristik yang berbeda. Simpul akar dan simpul internal ditandai dengan bentuk oval dan simpul daun ditandai dengan bentuk segi empat (Muzakir & Wulandari, 2016).
             </p>
+            <br>
             <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover" border="1" >
                 <tr>
                     <th style="text-align:center;">No</th>
@@ -98,4 +99,4 @@ $mpdf = new \Mpdf\Mpdf(['format' => $size]);
 $mpdf->AddPage($orientation);
 
 $mpdf->WriteHTML($html);
-$mpdf->Output("Cetak Data Asset.pdf", 'I');
+$mpdf->Output("Cetak Surat Peminjaman Asset.pdf", 'I');

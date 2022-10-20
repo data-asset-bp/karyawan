@@ -5,8 +5,7 @@
     <div class="card mb-4">
       <div class="card-header">
         <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary btn-sm ml-2" data-toggle="modal" data-target="#myModal">
-          ADD
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_asset"><i class="fa fa-plus"></i>
         </button>
       </div>
       <div class="card-body">
@@ -48,11 +47,9 @@
 
 
                   <td>
-                    <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $id; ?>">
-                      Edit
+                    <button type="button" class="btn btn-warning btn-sm ml-2" data-toggle="modal" data-target="#edit<?= $id; ?>"><i class="fa fa-edit"></i>
                     </button>
-                    <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $id; ?>">
-                      Delete
+                    <button type="button" class="btn btn-danger btn-sm ml-2" data-toggle="modal" data-target="#delete<?= $id; ?>"><i class="fa fa-trash"></i>
                     </button>
 
                     <!-- edit The Modal -->
