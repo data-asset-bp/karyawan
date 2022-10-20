@@ -13,12 +13,11 @@
           <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover">
             <thead>
               <tr>
-                <td>NO</td>
+                <td>No</td>
                 <td>Name</td>
-                <td>USERNAME</td>
-                <td>PASSWORD</td>
-                <td>More</td>
-
+                <td>Username</td>
+                <td>Password</td>
+                <td>Action</td>
               </tr>
             </thead>
             <tbody>

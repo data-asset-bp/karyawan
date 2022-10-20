@@ -37,16 +37,15 @@
               <table id="example1" class="table table-bordered table-striped table-hover">
                 <thead>
                   <tr>
-                    <td>NO</td>
-                    <td>NO ASSET</td>
-                    <td>ASSET TYPE</td>
-                    <td>NO SERIAL</td>
-                    <td>CAP DATE</td>
-                    <td>DESCRIPTION</td>
-                    <td>STATUS</td>
+                    <td>No</td>
+                    <td>No Asset</td>
+                    <td>Asset Type</td>
+                    <td>No Serial</td>
+                    <td>Cap Date</td>
+                    <td>Description</td>
+                    <td>Status</td>
                     <td>Checkin/Checkout</td>
                     <td>Action</td>
-
                   </tr>
                 </thead>
                 <tbody>
