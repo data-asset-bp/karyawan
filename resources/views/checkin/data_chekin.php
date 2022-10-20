@@ -56,7 +56,7 @@
               <td><?= sts_check($sts_chek); ?></td>
               <td>
                 <a>
-                  <button type="button" class="dcd-badge dcd-badge-primary" data-toggle="modal" data-target="#checkin<?= $id; ?>"><i class="fa fa-shopping-cart"></i>
+                  <button type="button" class="dcd-badge dcd-badge-primary" style="color:grey" data-toggle="modal" data-target="#checkin<?= $id; ?>"><i class="fa fa-shopping-cart"></i>
                     Chek In
                   </button>
                 </a>
