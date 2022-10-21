@@ -21,8 +21,8 @@
                     <label>Office</label>
                     <select id="office" name="ho" class="form-control" required>
                         <option value="" selected disabled>Pilih Office</option>
-                        <option value="ho">HO</option>
-                        <option value="cabang">Cabang</option>
+                        <option value="HO">HO</option>
+                        <option value="CABANG">Cabang</option>
                     </select>
                     <br>
                     <label>Divisi</label>
@@ -90,21 +90,21 @@
                         personalArea.empty()
                         personalArea.append('<option value="" selected disabled>Pilih Personal Area</option>')
 
-                        if (office === 'ho') {
+                        if (office === 'HO') {
                             divisiHo.forEach(divisiOption => {
                                 divisi.append(`<option value="${divisiOption}">${divisiOption}</option>`)
                             })
-                        } else if (office === 'cabang') {
+                        } else if (office === 'CABANG') {
                             divisiCabang.forEach(divisiOption => {
                                 divisi.append(`<option value="${divisiOption}">${divisiOption}</option>`)
                             })
                         }
 
-                        if (office === 'ho') {
+                        if (office === 'HO') {
                             baHo.forEach(area => {
                                 branchArea.append(`<option value="${area}">${area}</option>`)
                             })
-                        } else if (office === 'cabang') {
+                        } else if (office === 'CABANG') {
                             baCabang.forEach(area => {
                                 branchArea.append(`<option value="${area}">${area}</option>`)
                             })

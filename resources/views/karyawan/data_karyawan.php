@@ -4,9 +4,7 @@
 
 		<div class="card mb-4">
 			<div class="card-header">
-				<!-- Button to Open the Modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_asset"><i class="fa fa-plus"></i>
-				</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah_karyawan"><i class="fa fa-plus" style="font-size : 15px;"></i>
 			</div>
 			<div class="card-body">
 				<div class="table table-responsive">
