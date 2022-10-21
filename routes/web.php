@@ -54,7 +54,7 @@ switch ($_GET['page']) {
     case "status_pending":
         include 'resources/views/status/status_pending.php';
         break;
-    case "status_undeployable":
+    case "status_undeployed":
         include 'resources/views/status/status_undeployed.php';
         break;
 
