@@ -184,7 +184,7 @@
                                       <input type="text" name="note" class="form-control" required>
                                       <br>
                                       <input type="hidden" name="idp" value="<?= $no_asset; ?>">
-                                      <button type="submit" class="btn btn-primary btn-sm ml-2" name="checkout">Checkout</button>
+                                      <button type="submit" class="dcd-badge dcd-badge-primary" style="color:grey" name="checkout"><i class="fa fa-shopping-cart"></i>Check Out</button>
                                     </div>
                               </form>
 
