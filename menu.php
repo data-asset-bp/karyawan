@@ -97,7 +97,7 @@
                     <a class="nav-link" href="index.php?page=user">
                         <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
                         Admin
-                    </a>
+                    </a>    
                     <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><span>Assets</span>
                     </button>
                     <div class="collapse">
