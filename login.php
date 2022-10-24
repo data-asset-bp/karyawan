@@ -2,7 +2,7 @@
 include "verify.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: auto; min-height: 100%;">
 
 <head>
     <meta charset="utf-8" />
@@ -16,7 +16,7 @@ include "verify.php";
 </head>
 
 <body style="background-color: cornsilk;">
-    <img src="binapertiwi_logo.png" class="d-block w-100" alt="logo">
+    <center><img src="./images/binapertiwi_logo.png" class="d-block w-25" alt="logo"></center>
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>

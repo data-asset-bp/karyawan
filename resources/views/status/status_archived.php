@@ -24,9 +24,9 @@
                                         <td>No Serial</td>
                                         <td>Cap Date</td>
                                         <td>Description</td>
-                                        <td>Status</td>
-                                        <td>Checkin/Checkout</td>
-                                        <td>Action</td>
+                                        <td style="text-align: center ;">Status</td>
+                                        <td style="text-align: center ;">Checkin/Checkout</td>
+                                        <td style="text-align: center ;">Action</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -55,9 +55,9 @@
                                             <td><?= $no_serial; ?></td>
                                             <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                                             <td><?= $description; ?></td>
-                                            <td><?= sts_check($sts); ?></td>
+                                            <td style="text-align:center"><?= sts_check($sts); ?></td>
                                             <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
-                                            <td>
+                                            <td style="text-align:center">
                                                 <button type="button" class="dcd-badge dcd-badge-primary" style="color:grey" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
                                                     Check Out
                                                 </button>

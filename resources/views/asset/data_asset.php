@@ -12,6 +12,9 @@
               <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z" />
             </svg></button>
         </a>
+        <!-- <a href="export_pdf_asset.php">
+          <button type="button" class="btn btn-success"><i class="fa fa-download" style="font-size : 15px;"></i></button>
+        </a> -->
 
         <br><br>
         <div class="card mb-4">
@@ -43,9 +46,9 @@
                     <td>No Serial</td>
                     <td>Cap Date</td>
                     <td>Description</td>
-                    <td>Status</td>
-                    <td>Checkin/Checkout</td>
-                    <td>Action</td>
+                    <td style="text-align: center ;">Status</td>
+                    <td style="text-align: center ;">Checkin/Checkout</td>
+                    <td style="text-align: center ;">Action</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -85,7 +88,7 @@
                       <td><?= $no_serial; ?></td>
                       <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                       <td><?= $description; ?></td>
-                      <td><?= sts_check($sts) ?></td>
+                      <td style="text-align: center ;"><?= sts_check($sts) ?></td>
 
                       <!-- <td>
                         <span class="dcd-badge dcd-badge-success"><?= sts_check($sts) ?></span>
@@ -93,7 +96,8 @@
 
                       <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
 
-                      <td>
+                      <!-- Button Check Out -->
+                      <td style="text-align: center ;">
                         <button type="button" class="dcd-badge dcd-badge-primary" style="color:grey" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
                           Check Out
                         </button>
@@ -193,6 +197,7 @@
                         </div>
                       </td>
 
+                      <!-- Button Edit & Delete -->
                       <td>
                         <button type="button" class="dcd-badge dcd-badge-warning js-in-queue" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
                         </button>

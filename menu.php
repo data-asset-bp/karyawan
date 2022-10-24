@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" style="height: auto; min-height: 100%;">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -13,7 +13,7 @@ if (isset($_POST['login'])) {
     if ($hitung > 0) {
         $_SESSION['log'] = 'true';
 
-        header('location:indexx.php');
+        header('location:index.php?page=dashboard');
     } else {
         header('location:login.php');
     };
