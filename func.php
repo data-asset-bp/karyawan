@@ -28,18 +28,18 @@ function sts_check($kode)
 function tanggal_indo($tanggal)
 {
 	$bulan = array(
-		1 =>   'Januari',
-		'Februari',
-		'Maret',
-		'April',
+		1 =>   'Jan',
+		'Feb',
+		'Mar',
+		'Apr',
 		'Mei',
-		'Juni',
-		'Juli',
-		'Agustus',
-		'September',
-		'Oktober',
-		'November',
-		'Desember'
+		'Jun',
+		'Jul',
+		'Aug',
+		'Sep',
+		'Oct',
+		'Nov',
+		'Des'
 	);
 	$split = explode('-', $tanggal);
 	return $split[2] . ' ' . $bulan[(int)$split[1]] . ' ' . $split[0];

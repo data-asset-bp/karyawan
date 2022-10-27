@@ -97,7 +97,7 @@
                       <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
 
                       <!-- Button Check Out -->
-                      <td style="text-align: center ;">
+                      <td>
                         <button type="button" class="dcd-badge dcd-badge-primary" style="color:grey" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
                           Check Out
                         </button>

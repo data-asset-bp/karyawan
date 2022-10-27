@@ -218,3 +218,4 @@ if (isset($_POST['print'])) {
 
 	$addtotable = mysqli_query($con, "insert into data_peminjaman (nrp, nama_karyawan, no_asset, asset_type, no_serial, asset_description) values('$nrp', '$nama_karyawan','$no_asset','$asset_type','$no_serial','$asset_description')");
 }
+

@@ -25,11 +25,11 @@ if ($asset) {
         $data .= '
         
         <tr>
-            <td style="text-align:center;">' . $no++ . '</td>
+            <td style="text-align:center;padding-top:5px;padding-bottom:5px">' . $no++ . '</td>
             <td style="text-align:center;">' . $obj->no_asset . '</td>
-            <td style="text-align:center;">' . $obj->asset_description . '</td>
-            <td style="text-align:center;">' . $obj->no_serial . '</td>
             <td style="text-align:center;">' . $obj->asset_type . '</td>
+            <td style="text-align:center;">' . $obj->no_serial . '</td>
+            <td style="text-align:center;">' . $obj->asset_description . '</td>
         </tr>
         
         ';
@@ -69,13 +69,13 @@ $html =
             Pada decision tree setiap simpul daun menandai label kelas. Simpul yang bukan simpul akhir terdiri dari akar dan simpul internal yang terdiri dari kondisi tes atribut pada sebagian record yang mempunyai karakteristik yang berbeda. Simpul akar dan simpul internal ditandai dengan bentuk oval dan simpul daun ditandai dengan bentuk segi empat (Muzakir & Wulandari, 2016).
             </p>
             <br>
-            <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover" border="1" >
+            <table style="width:95%" align=center class="border table-bordered table-striped table-hover">
                 <tr>
-                    <th style="text-align:center;">No</th>
-                    <th style="text-align:center;">Asset Number</th>
-                    <th style="text-align:center;">Asset Type</th>
-                    <th style="text-align:center;">Serial Number</th>
-                    <th style="text-align:center;">Asset Description</th>
+                    <th style="width:5%;text-align:center;padding-bottom:5px;padding-top:5px">No</th>
+                    <th style="width:20%;text-align:center;">Asset Number</th>
+                    <th style="width:15%;text-align:center;">Asset Type</th>
+                    <th style="width:20%;text-align:center;">Serial Number</th>
+                    <th style="width:35%;text-align:center;">Asset Description</th>
                 </tr>        
         '
 
@@ -90,7 +90,9 @@ $html =
             Jakarta, ' . date('d M Y') . '
             <br><br><br><br><br><br>
             <address>
-                <strong>' . $karyawan->Nama_karyawan . '</strong>
+                <strong>
+                ' . $karyawan->Nama_karyawan . '
+                </strong>
             </address>
         </div>
         ';

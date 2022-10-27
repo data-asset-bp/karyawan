@@ -1,6 +1,6 @@
 <main>
   <div class="container-fluid">
-    <h1 class="mt-4">Proses Check In / Check Out</h1>
+    <h1 class="mt-4">Check In / Check Out</h1>
 
   </div>
   <!-- <div class="card-header">
@@ -32,7 +32,6 @@
 
           $no = 0;
           $sql = mysqli_query($con, "SELECT * FROM data_chek_asset order by tgl_chekout ASC");
-
           while ($data = mysqli_fetch_array($sql)) {
             $no++;
             $id = $data['id_chek'];
@@ -51,7 +50,7 @@
               <td><?= $no_asset; ?></td>
               <td><?= noassettodesc($no_asset); ?></td>
               <td><?= date('d M Y', strtotime($data['tgl_chekout'])) ?></td>
-              <td><?= date('d M Y', strtotime($data['tgl_chekin'])) ?></td>
+              <td><?= tanggal_indo($tgl_checkin) ?></td>
               <td><?= $note_checkout; ?></td>
               <td><?= $note_checkin; ?></td>
               <td style="text-align: center ;"><?= sts_check($sts_chek); ?></td>
