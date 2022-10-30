@@ -15,26 +15,10 @@ include 'func.php';
 
 $check = $conn->query("SELECT * FROM data_chek_asset WHERE id_chek='" . $_GET['id'] . "'")->fetch_object();
 $karyawan = $conn->query("SELECT * FROM data_karyawan WHERE Nrp='" . $check->Nrp . "'")->fetch_object();
-$asset = $conn->query("SELECT * FROM data_asset WHERE no_asset='" . $check->no_asset . "'");
+$asset = $conn->query("SELECT * FROM data_asset WHERE no_asset='" . $check->no_asset . "'")->fetch_object();
 $admin = $conn->query("SELECT * FROM user WHERE nama=nama")->fetch_object();
 
 $data = '';
-
-if ($asset) {
-    while ($obj = $asset->fetch_object()) {
-        $data .= '
-        
-        <tr>
-            <td style="text-align:center;padding-top:5px;padding-bottom:5px">' . $no++ . '</td>
-            <td style="text-align:center;">' . $obj->no_asset . '</td>
-            <td style="text-align:center;">' . $obj->asset_type . '</td>
-            <td style="text-align:center;">' . $obj->no_serial . '</td>
-            <td style="text-align:center;">' . $obj->asset_description . '</td>
-        </tr>
-        
-        ';
-    }
-}
 
 $mpdf = new \Mpdf\Mpdf();
 $html =
@@ -44,69 +28,85 @@ $html =
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
-        <br><br><br>
         <div class="col-sm-4 invoice-col">
-            <h3 style="text-align:center;">Invoice Peminjaman Asset</h3>
+            <h3 style="text-align:center;">
+                <u>
+                    TANDA TERIMA PEMINJAMAN ASSET
+                </u>
+                <h5 style="line-height: 0.1">
+                No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /IT/X/2022
+                </h5>
+            </h3>
         </div>
-        <br>
         <div class="column invoice-info">
             <div class="col-sm-4 invoice-col">
-                From:
-                <address>
-                    <strong>' . $admin->nama . '</strong>
-                </address>
+                Pada hari ini, ' . date('l') . ' tanggal ' . date(' d F Y') . ', yang bertanda tangan di bawah ini :
             </div>
             <div class="col-sm-4 invoice-col">
-                To:
-                <address>
-                    <strong>' . $karyawan->Nama_karyawan . '</strong>
-                </address>
+                <table style="width:100%" >
+                    <tr>
+                        <td style="width:10%;text-align:left;vertical-align: text-top;">Nama</td>
+                        <td style="width:2%;text-align:left;">:</td>
+                        <td style="width:88%;text-align:justify;">' . $karyawan->Nama_karyawan . '</td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%;text-align:left;vertical-align: text-top;">Jabatan</td>
+                        <td style="width:2%;text-align:left;">:</td>
+                        <td style="width:88%;text-align:justify;">' . $karyawan->Position . '</td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%;text-align:left;vertical-align: text-top;">Divisi</td>
+                        <td style="width:2%;text-align:left;">:</td>
+                        <td style="width:88%;text-align:justify;">' . $karyawan->New_Div . '</td>
+                    </tr>
+                </table>
             </div>
-            <p style="text-align:justify ;" class="col-sm-4 invoice-col">
-            Decision Tree Classifier merupakan metode pembelajaran yang digunakan untuk klasifikasi, metode ini bertujuan untuk membuat model yang memprediksi nilai variabel target dengan mempelajari aturan keputusan sederhana yang disimpulkan dari data.
-            <br><br>
-            Metode decision tree mengubah fakta yang sangat besar menjadi pohon keputusan yang mempresentasikan aturan. Aturan dapat dengan mudah dipahami dengan bahasa alami. Dan mereka juga dapat diekspresikan dalam bentuk basis data seperti Structure Query Language (SQL) untuk mencari record pada data tertentu. 
-            <br><br>
-            Sebuah decision tree adalah sebuah struktur yang dapat digunakan untuk membagi kumpulan data yang besar menjadi himpunan-himpunan record yang lebih kecil dengan menerapkan serangkaian aturan keputusan. 
-            <br><br>
-            Pada decision tree setiap simpul daun menandai label kelas. Simpul yang bukan simpul akhir terdiri dari akar dan simpul internal yang terdiri dari kondisi tes atribut pada sebagian record yang mempunyai karakteristik yang berbeda. Simpul akar dan simpul internal ditandai dengan bentuk oval dan simpul daun ditandai dengan bentuk segi empat (Muzakir & Wulandari, 2016).
-            </p>
             <br>
-            <table style="width:95%" align=center class="border table-bordered table-striped table-hover">
+            <div class="col-sm-4 invoice-col">
+                Telah menerima peminjaman asset IT sebagai alat kerja dengan detail berikut :
+            </div>
+            <div class="col-sm-4 invoice-col">
+                <table style="width:100%" >
+                    <tr>
+                        <td style="width:18%;text-align:left;vertical-align: text-top;">No Asset</td>
+                        <td style="width:2%;text-align:left;">:</td>
+                        <td style="width:80%;text-align:justify;">' . $asset->no_asset . '</td>
+                    </tr>
+                    <tr>
+                        <td style="width:18%;text-align:left;vertical-align: text-top;">Deskripsi Asset</td>
+                        <td style="width:2%;text-align:left;">:</td>
+                        <td style="width:80%;text-align:justify;">' . $asset->asset_description . '</td>
+                    </tr>
+                    <tr>
+                        <td style="width:18%;text-align:left;vertical-align: text-top;">Serial Number</td>
+                        <td style="width:2%;text-align:left;">:</td>
+                        <td style="width:80%;text-align:justify;">' . $asset->no_serial . '</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br><br><br>
+        <div style="text-align:Center ;">
+            <table style="width:100%" >
                 <tr>
-                    <th style="width:5%;text-align:center;padding-bottom:5px;padding-top:5px">No</th>
-                    <th style="width:20%;text-align:center;">Asset Number</th>
-                    <th style="width:15%;text-align:center;">Asset Type</th>
-                    <th style="width:20%;text-align:center;">Serial Number</th>
-                    <th style="width:35%;text-align:center;">Asset Description</th>
-                </tr>  
+                    <td style="width:50%;text-align:center;">Diterima oleh :</td>
+                    <td style="width:50%;text-align:center;">Dikirim oleh :</td>
+                </tr>
                 <tr>
-            <td style="text-align:center;padding-top:5px;padding-bottom:5px">' . $no++ . '</td>
-            <td style="text-align:center;">' . $obj->no_asset . '</td>
-            <td style="text-align:center;">' . $obj->asset_type . '</td>
-            <td style="text-align:center;">' . $obj->no_serial . '</td>
-            <td style="text-align:center;">' . $obj->asset_description . '</td>
-        </tr>
-        </table>      
-        '
-
-    . $data .
-
-    '
+                    <td style="text-align:center;"><br><br><br><br><br>( ' . $karyawan->Nama_karyawan . ' )</td>
+                    <td style="text-align:center;"><br><br><br><br><br>( ' . $admin->nama . ' )</td>
+                </tr>
             </table>
+        </div>
         <br>
+        <div style="text-align:Center ;">
+            Mengetahui,
+            <br><br><br><br><br>
+            <strong>
+                ( RIZA ADITHYA )
+            </strong>
         </div>
 
-        <br>
-        <div class="col-sm-4 invoice-col" style="">
-            Jakarta, ' . date('d F Y') . '
-            <br><br><br><br><br><br>
-            <address>
-                <strong>
-                ' . $karyawan->Nama_karyawan . '
-                </strong>
-            </address>
-        </div>
         ';
 
 

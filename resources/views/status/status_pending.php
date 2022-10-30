@@ -56,7 +56,6 @@
                                             <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                                             <td><?= $description; ?></td>
                                             <td style="text-align:center"><?= sts_check($sts); ?></td>
-                                            <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
                                             <td>
                                                 <button type="button" class="dcd-badge dcd-badge-primary" style="color:grey" data-toggle="modal" data-target="#checkout<?= $no_asset; ?>"><i class="fa fa-shopping-cart"></i>
                                                     Check Out
@@ -157,10 +156,11 @@
                                                 </div>
                                             </td>
 
+                                            <!-- Button Edit & Delete -->
                                             <td>
-                                                <button type="button" class="dcd-badge dcd-badge-warning" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
+                                                <button type="button" class="dcd-badge dcd-badge-warning js-in-queue" data-toggle="modal" data-target="#edit<?= $no_asset; ?>"><i class="fa fa-edit"></i>
                                                 </button>
-                                                <button type="button" class="dcd-badge dcd-badge-danger" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
+                                                <button type="button" class="dcd-badge dcd-badge-danger js-in-queue" data-toggle="modal" data-target="#delete<?= $no_asset; ?>"><i class="fa fa-trash"></i>
                                                 </button>
 
                                                 <!-- edit The Modal -->
@@ -194,7 +194,7 @@
                                                                     <br>
 
                                                                     <input type="hidden" name="idp" value="<?= $no_asset; ?>">
-                                                                    <button type="submit" class="btn btn-primary" name="editasset">Simpan</button>
+                                                                    <button type="submit" class="btn btn-primary" name="edit_asset">Simpan</button>
                                                                 </div>
                                                             </form>
 
@@ -220,13 +220,14 @@
                                                                     <input type="hidden" name="idp" value="<?= $no_asset; ?>">
                                                                     <br>
                                                                     <br>
-                                                                    <button type="submit" class="btn btn-danger" name="hapusasset">Hapus</button>
+                                                                    <button type="submit" class="btn btn-danger" name="hapus_asset">Hapus</button>
                                                                 </div>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
+                                        </tr>
                                         </tr>
                                     <?php
                                     }

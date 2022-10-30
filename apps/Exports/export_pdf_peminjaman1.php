@@ -33,7 +33,7 @@ $html =
                 <u>
                     TANDA TERIMA PEMINJAMAN ASSET
                 </u>
-                <h5>
+                <h5 style="line-height: 0.1">
                 No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /IT/X/2022
                 </h5>
             </h3>

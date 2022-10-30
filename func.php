@@ -46,7 +46,7 @@ function tanggal_indo($tanggal)
 }
 
 //Merubah NRp ke nama karyawan
-function nrptonama($id)
+function nrp_to_nama($id)
 {
 	include("koneksi.php");
 	$sql = "SELECT Nama_karyawan FROM data_karyawan WHERE Nrp='$id'";
@@ -56,7 +56,7 @@ function nrptonama($id)
 }
 
 //Merubah no_asset to description
-function noassettodesc($id)
+function no_asset_to_desc($id)
 {
 	include("koneksi.php");
 	$sql = "SELECT asset_description FROM data_asset WHERE no_asset='$id'";
@@ -103,22 +103,4 @@ function no_asset_to_nama_admin($id)
 	$hasil = mysqli_query($con, $sql);
 	$data = mysqli_fetch_array($hasil);
 	return $data['nama'];
-}
-
-function no_asset_to_status_chek($id)
-{
-	include("koneksi.php");
-	$sql = "SELECT sts_chek FROM data_chek_asset WHERE no_asset='$id'";
-	$hasil = mysqli_query($con, $sql);
-	$data = mysqli_fetch_array($hasil);
-	return $data['sts_chek'];
-}
-
-function status_chek_to_status_asset($id)
-{
-	include("koneksi.php");
-	$sql = "SELECT sts_chek FROM data_chek_asset WHERE no_asset='$id'";
-	$hasil = mysqli_query($con, $sql);
-	$data = mysqli_fetch_array($hasil);
-	return $data['sts_chek'];
 }

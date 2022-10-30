@@ -46,9 +46,9 @@
           ?>
             <tr>
               <td style="text-align:center"><?= $no; ?></td>
-              <td><?= nrptonama($nrp); ?></td>
+              <td><?= nrp_to_nama($nrp); ?></td>
               <td><?= $no_asset; ?></td>
-              <td><?= noassettodesc($no_asset); ?></td>
+              <td><?= no_asset_to_desc($no_asset); ?></td>
               <td><?= date('d M Y', strtotime($data['tgl_chekout'])) ?></td>
               <td><?= tanggal_indo($tgl_checkin) ?></td>
               <td><?= $note_checkout; ?></td>
@@ -89,7 +89,7 @@
                         <input type="text" name="no_asset" value="<?= $no_asset; ?>" class="form-control" disabled>
                         <br>
                         <label>Description</label>
-                        <input type="text" name="description" value="<?= noassettodesc($no_asset); ?>" class="form-control" disabled>
+                        <input type="text" name="description" value="<?= no_asset_to_desc($no_asset); ?>" class="form-control" disabled>
                         <br>
                         <label>Status</label>
                         <select class="form-control" name="sts" required>

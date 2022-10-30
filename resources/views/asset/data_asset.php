@@ -89,11 +89,9 @@
                       <td><?= $description; ?></td>
                       <td style="text-align: center ;"><?= sts_check($sts) ?></td>
 
-                      <!-- <td>
+                      <!-- <td style="text-align: center ;">
                         <span class="dcd-badge dcd-badge-success"><?= sts_check($sts) ?></span>
                       </td> -->
-
-                      <!-- <td><?= sts_check(no_asset_to_status_chek($no_asset)) ?></td> -->
 
                       <!-- Button Check Out -->
                       <td>
