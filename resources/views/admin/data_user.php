@@ -14,10 +14,10 @@
             <thead>
               <tr>
                 <td style="text-align:center">No</td>
-                <td>Name</td>
+                <td>Nama</td>
                 <td>Username</td>
                 <td>Password</td>
-                <td>Action</td>
+                <td>Aksi</td>
               </tr>
             </thead>
             <tbody>
@@ -58,14 +58,14 @@
 
                           <!-- Modal Header -->
                           <div class="modal-header">
-                            <h4 class="modal-title">Edit Data User</h4>
+                            <h4 class="modal-title">Edit User</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                           </div>
 
                           <!-- Modal body -->
                           <form method="post">
                             <div class="modal-body">
-                              <label>Name</label>
+                              <label>Nama</label>
                               <input type="text" name="nama" readonly value="<?= $nama; ?>" class="form-control" required>
                               <br>
                               <label>Username</label>
@@ -75,7 +75,7 @@
                               <input type="text" name="password" value="<?= $password; ?>" class="form-control" required>
                               <br>
                               <input type="hidden" name="idp" value="<?= $id; ?>">
-                              <button type="submit" class="btn btn-primary btn-sm ml-2" name="edituser">Save</button>
+                              <button type="submit" class="btn btn-primary btn-sm ml-2" name="edituser">Simpan</button>
                             </div>
                           </form>
 
@@ -90,7 +90,7 @@
 
                           <!-- Modal Header -->
                           <div class="modal-header">
-                            <h4 class="modal-title">Delete User</h4>
+                            <h4 class="modal-title">Hapus User</h4>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                           </div>
 

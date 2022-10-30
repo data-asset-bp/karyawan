@@ -91,38 +91,69 @@
                 <div class="nav">
 
                     <a class="nav-link" href="index.php?page=dashboard">
-                        <div class="sb-nav-link-icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa fa-home" style="font-size : 15px;" aria-hidden="true"></i></div>
                         Dashboard
                     </a>
                     <a class="nav-link" href="index.php?page=user">
-                        <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fa fa-user" style="font-size : 15px;" aria-hidden="true"></i></div>
                         Admin
                     </a>
-                    <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" aria-hidden="true"></i><span>Assets</span>
+                    <button class="dropdown-btn btn-sm ml-2"><i class="fa fa-list" style="font-size : 15px;" aria-hidden="true"> </i><span> Assets</span>
                     </button>
                     <div class="collapse">
-                        <li><a class="nav-link collapse-item" href="index.php?page=data_asset"></i>All</a></li>
-                        <li><a class="nav-link collapse-item" href="index.php?page=status_archived"></i>Archived</a></li>
-                        <li><a class="nav-link collapse-item" href="index.php?page=status_deployable"></i>Deployable</a></li>
-                        <li><a class="nav-link collapse-item" href="index.php?page=status_deployed"></i>Deployed</a></li>
-                        <li><a class="nav-link collapse-item" href="index.php?page=status_pending"></i>Pending</a></li>
-                        <li><a class="nav-link collapse-item" href="index.php?page=status_undeployed"></i>Un-Deployed</a></li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=cari_karyawan">
+                                <i class="fa fa-search" style="font-size : 15px;"></i>
+                                Search
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=data_asset">
+                                <i></i>
+                                - List All
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=status_archived">
+                                <i></i>
+                                - All Archived
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=status_deployable">
+                                <i></i>
+                                - All Deployable
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=status_deployed">
+                                <i></i>
+                                - All Deployed
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=status_pending">
+                                <i></i>
+                                - All Pending
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link collapse-item" href="index.php?page=status_undeployed">
+                                <i></i>
+                                - All Un-Deployed
+                            </a>
+                        </li>
                     </div>
                     <a class="nav-link" href="index.php?page=karyawan">
-                        <div class="sb-nav-link-icon"><i class="far fa-address-card" aria-hidden="true"></i></div>
-                        Employee Data
+                        <div class="sb-nav-link-icon"><i class="far fa-address-card" style="font-size : 15px;" aria-hidden="true"></i></div>
+                        Data Karyawan
                     </a>
                     <a class="nav-link" href="index.php?page=chekin">
-                        <div class="sb-nav-link-icon"><i class="far fa-calendar-check" aria-hidden="true"></i></div>
+                        <div class="sb-nav-link-icon"><i class="far fa-calendar-check" style="font-size : 15px;" aria-hidden="true"></i></div>
                         Check In/Check Out
                     </a>
 
-                    <a class="nav-link" href="index.php?page=cari_karyawan">
-                        <div class="sb-nav-link-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
-                        Search Employee Asset Data
-                    </a>
-
-                    <button class="dropdown-btn btn-sm ml-2"><i class="fas fa-cogs" aria-hidden="true"></i> <a>Pengaturan </a>
+                    <button class="dropdown-btn btn-sm ml-2"><i class="fas fa-cogs" style="font-size : 15px;" aria-hidden="true"></i> <a>Pengaturan </a>
                     </button>
                     <div class="dropdown-container btn-sm ml-2">
                         <li><a class="nav-link" href="index.php?page=tambah_divisi">Tambah Divisi </a></li>
@@ -134,7 +165,7 @@
 
                     <a class="nav-link" href="logout.php">
                         <div class="sb-nav-link-icon"><i class="fa fa-ellipsis-v"></i></div>
-                        Log Out
+                        Keluar
                     </a>
 
 

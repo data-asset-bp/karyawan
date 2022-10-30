@@ -23,7 +23,7 @@
               <label>Pilih Jenis Pencarian</label>
               <select class="form-control" name="pil">
                 <option selected disabled>--Pilih Jenis Pencarian--</option>
-                <option value='1'>NO_ASSET</option>
+                <option value='1'>NO ASSET</option>
                 <option value='2'>ASSET TYPE</option>
                 <option value='3'>NO SERIAL</option>
                 <option value='4'>ASSET DESCRIPTION</option>
@@ -42,13 +42,13 @@
                   <tr>
                     <td style="text-align:center">No</td>
                     <td>No Asset</td>
-                    <td>Asset Type</td>
+                    <td>Tipe Asset</td>
                     <td>No Serial</td>
-                    <td>Cap Date</td>
-                    <td>Description</td>
+                    <td style="text-align: center ;">Cap Date</td>
+                    <td>Deskripsi</td>
                     <td style="text-align: center ;">Status</td>
                     <td style="text-align: center ;">Checkin/Checkout</td>
-                    <td style="text-align: center ;">Action</td>
+                    <td style="text-align: center ;">Aksi</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -72,7 +72,6 @@
 
                   while ($data = mysqli_fetch_array($sql)) {
                     $no++;
-                    $id = $data['id_asset'];
                     $no_asset = $data['no_asset'];
                     $type = $data['asset_type'];
                     $no_serial = $data['no_serial'];
@@ -86,7 +85,7 @@
                       <td><?= $no_asset; ?></td>
                       <td><?= $type; ?></td>
                       <td><?= $no_serial; ?></td>
-                      <td><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
+                      <td style="text-align: center ;"><?= date('d M Y', strtotime($data['cap_date'])) ?></td>
                       <td><?= $description; ?></td>
                       <td style="text-align: center ;"><?= sts_check($sts) ?></td>
 

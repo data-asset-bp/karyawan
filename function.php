@@ -151,7 +151,7 @@ if (isset($_POST['edit_asset'])) {
 
 //menghapus data Asset
 if (isset($_POST['hapus_asset'])) {
-	$idp = $_POST['idp'];
+	$no_asset = $_POST['idp'];
 
 	$hapus = mysqli_query($con, "delete from  data_asset where no_asset='$no_asset'");
 	if ($hapus) {
@@ -191,10 +191,9 @@ if (isset($_POST['checkin'])) {
 	$tgl = $_POST['tgl'];
 	$sts = $_POST['sts'];
 	$note = $_POST['note'];
-	$no_asset = $_POST['no_asset'];
 
 
-	$query = mysqli_query($con, "update data_asset set sts_asset='$sts' where no_asset='$no_asset'");
+	$query = mysqli_query($con, "update data_asset set sts_asset='$sts' where no_asset='$id'");
 	$query1 = mysqli_query($con, "update data_chek_asset set  sts_chek='$sts', tgl_chekin='$tgl', note_checkin='$note' where id_chek='$id'");
 
 	if ($addtotable) {

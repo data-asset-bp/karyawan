@@ -79,7 +79,15 @@ $html =
                     <th style="width:15%;text-align:center;">Asset Type</th>
                     <th style="width:20%;text-align:center;">Serial Number</th>
                     <th style="width:35%;text-align:center;">Asset Description</th>
-                </tr>        
+                </tr>  
+                <tr>
+            <td style="text-align:center;padding-top:5px;padding-bottom:5px">' . $no++ . '</td>
+            <td style="text-align:center;">' . $obj->no_asset . '</td>
+            <td style="text-align:center;">' . $obj->asset_type . '</td>
+            <td style="text-align:center;">' . $obj->no_serial . '</td>
+            <td style="text-align:center;">' . $obj->asset_description . '</td>
+        </tr>
+        </table>      
         '
 
     . $data .
