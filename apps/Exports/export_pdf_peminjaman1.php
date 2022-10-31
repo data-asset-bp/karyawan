@@ -85,19 +85,19 @@ $html =
                 </table>
             </div>
             <br>
-            <p style="text-align:justify ;" class="col-sm-4 invoice-col">
+            <p class="col-sm-4 invoice-col" style="text-align:justify ;" >
                 Dengan kententuan sebagai berikut:
             <br>
             <div class="col-sm-4 invoice-col">
-                <table style="width:100%">
+                <table style="width:100%"s>
                     <tr>
                         <td style="width:3%;text-align:center;vertical-align: text-top;">1. </td>
                         <td style="width:97%;text-align:justify;">
-                            PC/Notebook milik PT. BINA PERTIWI dan telah diinstall software standart BP ( Windows, Ms.Office, SAP, Antivirus & Utility ). Pemakai/user tidak diperkenankan untuk menginstall software tambahan tanpa sepengetahuan IT, hal ini dimaksudkan untuk memperkecil resiko problem notebook. Jika pemakai/user ingin menginstall software tambahan sesusai dengan kebutuhan perusahaan, maka pemakai/user harus melaporkan kepada atasan ybs terlebih dulu.
+                            PC/Notebook milik PT. BINA PERTIWI dan telah diinstall software standard BP ( Windows, Ms.Office, SAP, Antivirus & Utility ). Pemakai/user tidak diperkenankan untuk menginstall software tambahan tanpa sepengetahuan IT, hal ini dimaksudkan untuk memperkecil resiko problem notebook. Jika pemakai/user ingin menginstall software tambahan sesusai dengan kebutuhan perusahaan, maka pemakai/user harus melaporkan kepada atasan ybs terlebih dulu.
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:3%;text-align:center;vertical-align: text-top;">3. </td>
+                        <td style="width:3%;text-align:center;vertical-align: text-top;">2. </td>
                         <td style="width:97%;text-align:justify;">
                             Apabila terjadi kehilangan PC/notebook yang disebabkan oleh kelalaian pemakai/user tersebut, maka pemakai/user segera membuat laporan tertulis kepada atasan langsung. Pada saat bersamaan, pemakai/user notebook tersebut diwajibkan membuat Berita Acara Kehilangan ditanda-tangani oleh atasan langsung dan diserahkan ke IT untuk diproses lebih lanjut. Atasan pemakai/user wajib memberikan Surat Peringatan kepada pemakai/user tersebut yang disebabkan oleh kelalaian pemakai/user.
                         </td>
@@ -124,8 +124,8 @@ $html =
             </div>
         </div>
         <br>
-        <div style="text-align:Center ;">
-            <table style="width:100%" >
+        <div class="col-sm-4 invoice-col">
+            <table style="width:100%">
                 <tr>
                     <td style="width:50%;text-align:center;">Diterima oleh :</td>
                     <td style="width:50%;text-align:center;">Dikirim oleh :</td>
@@ -137,12 +137,10 @@ $html =
             </table>
         </div>
         <br>
-        <div style="text-align:Center ;">
+        <div class="col-sm-4 invoice-col" style="text-align:Center ;">
             Mengetahui,
             <br><br><br><br><br>
-            <strong>
                 ( RIZA ADITHYA )
-            </strong>
         </div>
 
         ';

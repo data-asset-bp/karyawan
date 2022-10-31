@@ -102,9 +102,7 @@ $html =
         <div style="text-align:Center ;">
             Mengetahui,
             <br><br><br><br><br>
-            <strong>
                 ( RIZA ADITHYA )
-            </strong>
         </div>
 
         ';

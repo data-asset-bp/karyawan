@@ -34,7 +34,7 @@ $html =
                     TANDA TERIMA PENGEMBALIAN ASSET
                 </u>
                 <h5 style="line-height: 0.1">
-                No. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /IT/X/2022
+                No. AST' . $check->id_chek . '/IT/X/2022
                 </h5>
             </h3>
         </div>
@@ -102,9 +102,7 @@ $html =
         <div style="text-align:Center ;">
             Mengetahui,
             <br><br><br><br><br>
-            <strong>
                 ( RIZA ADITHYA )
-            </strong>
         </div>
 
         ';
@@ -116,4 +114,4 @@ $mpdf = new \Mpdf\Mpdf(['format' => $size]);
 $mpdf->AddPage($orientation);
 
 $mpdf->WriteHTML($html);
-$mpdf->Output("Cetak Surat Peminjaman Asset.pdf", 'I');
+$mpdf->Output("Cetak Surat Pengembalian Asset.pdf", 'I');

@@ -4,10 +4,10 @@
 
   </div>
   <!-- <div class="card-header">
-    <a href="export_pdf_peminjaman.php">
-      <button type="button" class="btn btn-success btn-sm ml-2">Export</button>
-    </a>
-  </div> -->
+<a href="export_pdf_peminjaman.php">
+<button type="button" class="btn btn-success btn-sm ml-2">Export</button>
+</a>
+</div> -->
   <div class="card-body">
     <div class="table table-responsive">
       <table align="center" width="100%" cellspacing="0" class="table table-bordered table-striped table-hover">
