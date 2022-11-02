@@ -28,22 +28,37 @@ $html =
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
+
+        <!--  Format Logo Heading  -->
         <div class="col-sm-4 invoice-col">
-            <h3 style="text-align:center;">
+            <table style="width:100%;text-align:center;">
+                <tr>
+                    <td style="width:88%;line-height:0.9"><h4></td>
+                    <td style="width:12%;line-height:1;border:1px solid;padding:5px;" class="table table-bordered"><h4> PENGEMBALIAN </h4></td>
+                </tr>
+            </table>
+        </div>
+        <br><br>
+
+        <!--  Header dan Nomor Surat  -->
+        <div class="col-sm-4 invoice-col">
+            <h4 style="text-align:center;line-height: 0.1;">
                 <u>
                     TANDA TERIMA PENGEMBALIAN ASSET
                 </u>
                 <h5 style="line-height: 0.1">
-                No. AST' . $check->id_chek . '/IT/X/2022
+                    No. AST' . $check->id_chek . '/IT/X/2022
                 </h5>
-            </h3>
+            </h4>
         </div>
+
+        <!--  Format Pengembali  -->
         <div class="column invoice-info">
             <div class="col-sm-4 invoice-col">
                 Pada hari ini, ' . date('l') . ' tanggal ' . date(' d F Y') . ', yang bertanda tangan di bawah ini :
             </div>
             <div class="col-sm-4 invoice-col">
-                <table style="width:100%" >
+                <table style="width:100%;font-size: 13px;" >
                     <tr>
                         <td style="width:10%;text-align:left;vertical-align: text-top;">Nama</td>
                         <td style="width:2%;text-align:left;">:</td>
@@ -61,12 +76,16 @@ $html =
                     </tr>
                 </table>
             </div>
-            <br>
+        </div>
+        <br>
+
+        <!--  Format Detail Asset  -->
+        <div class="column invoice-info">
             <div class="col-sm-4 invoice-col">
-                Telah mengebalikan asset IT sebagai alat kerja dengan detail berikut :
+                Telah mengembalikan asset IT sebagai alat kerja dengan detail berikut :
             </div>
             <div class="col-sm-4 invoice-col">
-                <table style="width:100%" >
+                <table style="width:100%;font-size: 13px;" >
                     <tr>
                         <td style="width:18%;text-align:left;vertical-align: text-top;">No Asset</td>
                         <td style="width:2%;text-align:left;">:</td>
@@ -85,26 +104,32 @@ $html =
                 </table>
             </div>
         </div>
-        <br><br><br>
-        <div style="text-align:Center ;">
-            <table style="width:100%" >
+        <br><br>
+
+        <!--  Format TTD  -->
+        <div class="col-sm-4 invoice-col">
+            <table style="width:100%;font-size: 13px;">
                 <tr>
-                    <td style="width:50%;text-align:center;">Dikembalikan oleh :</td>
                     <td style="width:50%;text-align:center;">Diterima oleh :</td>
+                    <td style="width:50%;text-align:center;">Dikirim oleh :</td>
                 </tr>
                 <tr>
-                    <td style="text-align:center;"><br><br><br><br><br>( ' . $karyawan->Nama_karyawan . ' )</td>
-                    <td style="text-align:center;"><br><br><br><br><br>( ' . $admin->nama . ' )</td>
+                    <td style="text-align:center;text-transform:uppercase;font-weight: bold;"><br><br><br><br>( ' . $karyawan->Nama_karyawan . ' )</td>
+                    <td style="text-align:center;text-transform:uppercase;font-weight: bold;"><br><br><br><br>( ' . $admin->nama . ' )</td>
                 </tr>
             </table>
         </div>
         <br>
-        <div style="text-align:Center ;">
-            Mengetahui,
-            <br><br><br><br><br>
-                ( RIZA ADITHYA )
+        <div class="col-sm-4 invoice-col" style="text-align:Center;font-size:13px;">
+            <table style="width:100%;font-size: 13px;">
+                <tr>
+                    <td style="width:100%;text-align:center;">Mengetahui,</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;text-transform:uppercase;font-weight: bold;"><br><br><br><br>( RIZA ADITHYA )</td>
+                </tr>
+            </table>
         </div>
-
         ';
 
 
@@ -114,4 +139,4 @@ $mpdf = new \Mpdf\Mpdf(['format' => $size]);
 $mpdf->AddPage($orientation);
 
 $mpdf->WriteHTML($html);
-$mpdf->Output("Cetak Surat Pengembalian Asset.pdf", 'I');
+$mpdf->Output("Cetak Surat Pengembalian Asset [$asset->no_asset].pdf", 'I');

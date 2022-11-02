@@ -191,9 +191,10 @@ if (isset($_POST['checkin'])) {
 	$tgl = $_POST['tgl'];
 	$sts = $_POST['sts'];
 	$note = $_POST['note'];
+	$no_asset = $_POST['no_asset'];
 
 
-	$query = mysqli_query($con, "update data_asset set sts_asset='$sts' where no_asset='$id'");
+	$query = mysqli_query($con, "update data_asset set sts_asset='$sts' where no_asset='$no_asset'");
 	$query1 = mysqli_query($con, "update data_chek_asset set  sts_chek='$sts', tgl_chekin='$tgl', note_checkin='$note' where id_chek='$id'");
 
 	if ($addtotable) {
